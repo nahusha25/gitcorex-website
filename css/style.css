@@ -482,13 +482,12 @@ p:last-child {
 }
 
 /* ============================================================
-   HERO SECTION (SAAS AESTHETIC - NO NUMBERS / NO WAVE)
+   HERO SECTION
    ============================================================ */
 .hero {
     padding-top: calc(72px + var(--space-8));
-    padding-bottom: var(--space-10);
+    padding-bottom: calc(var(--space-10) + 40px);
     background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
-    border-bottom: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
@@ -705,6 +704,68 @@ p:last-child {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   FLOATING SECTION DIVIDER WAVE
+   ============================================================ */
+.hero-wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-waves {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    margin-bottom: -1px;
+    min-height: 44px;
+    max-height: 72px;
+    display: block;
+}
+
+/* Floating Parallax Layers */
+.parallax-waves > use {
+    animation: moveForever 22s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.wave-layer-1 {
+    fill: rgba(255, 75, 36, 0.05);
+    animation-delay: -2s;
+    animation-duration: 9s;
+}
+
+.wave-layer-2 {
+    fill: rgba(248, 249, 250, 0.5);
+    animation-delay: -3s;
+    animation-duration: 13s;
+}
+
+.wave-layer-3 {
+    fill: rgba(255, 75, 36, 0.09);
+    animation-delay: -4s;
+    animation-duration: 17s;
+}
+
+.wave-layer-4 {
+    fill: #F8F9FA; /* Matches .section-light background seamlessly */
+    animation-delay: -5s;
+    animation-duration: 22s;
+}
+
+@keyframes moveForever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
     }
 }
 
@@ -1966,6 +2027,11 @@ textarea.form-control {
         transition: none !important;
     }
 
+    .parallax-waves > use {
+        animation: none !important;
+        transform: none !important;
+    }
+
     .hero-service-card:hover,
     .hero-service-card:hover .hero-card-icon,
     .hero-service-card:hover .hero-card-arrow,
@@ -2124,12 +2190,26 @@ textarea.form-control {
     .hero-cards-backdrop {
         inset: -12px -8px;
     }
+
+    .hero-waves {
+        height: 44px;
+        min-height: 38px;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding-left: var(--space-2);
         padding-right: var(--space-2);
+    }
+
+    .hero {
+        padding-bottom: calc(var(--space-6) + 36px);
+    }
+
+    .hero-waves {
+        height: 34px;
+        min-height: 28px;
     }
 
     .hero-title {
