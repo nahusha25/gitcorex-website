@@ -568,282 +568,144 @@ p:last-child {
     color: #10B981;
 }
 
-/* Hero SaaS Mockup Composition (Completely number-free) */
+/* ============================================================
+   HERO SERVICES CARD STACK
+   ============================================================ */
 .hero-visual {
     position: relative;
-}
-
-.saas-window-frame {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
-    overflow: hidden;
-    position: relative;
-    transition: transform var(--transition-smooth);
-}
-
-.saas-window-frame:hover {
-    transform: translateY(-4px);
-}
-
-.saas-window-bar {
-    background: #F8F9FA;
-    border-bottom: 1px solid var(--border-color);
-    padding: 1.2rem 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.saas-window-dots {
-    display: flex;
-    gap: 0.6rem;
-}
-
-.saas-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-.dot-red { background: #FF5F56; }
-.dot-yellow { background: #FFBD2E; }
-.dot-green { background: #27C93F; }
-
-.saas-url-bar {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-pill);
-    padding: 0.4rem 1.6rem;
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    width: 240px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.saas-window-content {
-    padding: var(--space-3);
-    background: #FAFAFB;
-}
-
-/* Dashboard Mockup Interior */
-.mockup-app-header {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 1rem 1.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--space-2);
-}
-
-.mockup-app-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: var(--brand-charcoal);
-}
-
-.mockup-brand-icon {
-    width: 22px;
-    height: 22px;
-    background: var(--brand-orange);
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    font-size: 1.1rem;
+    width: 100%;
 }
 
-.mockup-status-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #047857;
-    background: #D1FAE5;
-    padding: 0.3rem 0.9rem;
-    border-radius: var(--radius-pill);
+/* Soft background behind cards: faint orange gradient blob + subtle dot grid */
+.hero-cards-backdrop {
+    position: absolute;
+    inset: -24px -16px;
+    border-radius: 24px;
+    background: 
+        radial-gradient(circle at 65% 45%, rgba(255, 75, 36, 0.13) 0%, rgba(255, 75, 36, 0.03) 55%, transparent 75%),
+        radial-gradient(rgba(32, 33, 36, 0.05) 1.2px, transparent 1.2px);
+    background-size: 100% 100%, 18px 18px;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.status-pulse {
-    width: 6px;
-    height: 6px;
-    background: #10B981;
-    border-radius: 50%;
-}
-
-/* Architecture Flow Nodes inside Mockup (Number-Free) */
-.mockup-pipeline-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 1.4rem;
-    margin-bottom: var(--space-2);
-}
-
-.mockup-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.mockup-card-tag {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--brand-orange);
-    background: var(--brand-orange-light);
-    padding: 0.2rem 0.7rem;
-    border-radius: 4px;
-}
-
-.mockup-nodes-flow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.6rem;
-    padding: 0.8rem 0;
-}
-
-.flow-node {
-    flex: 1;
-    background: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 0.8rem;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--brand-charcoal);
-}
-
-.flow-node i {
-    display: block;
-    font-size: 1.6rem;
-    color: var(--brand-orange);
-    margin-bottom: 0.4rem;
-}
-
-.flow-arrow {
-    color: var(--text-muted);
-    font-size: 1.2rem;
-}
-
-/* Neutral UI Skeleton Bars (No Numbers) */
-.mockup-modules-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.mockup-module-box {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 1.2rem;
-}
-
-.mockup-box-head {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--brand-charcoal);
-    margin-bottom: 0.8rem;
-}
-
-.mockup-box-head i {
-    color: var(--brand-orange);
-}
-
-.skeleton-lines {
+.hero-card-stack {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 480px;
 }
 
-.skeleton-bar {
-    height: 7px;
-    background: #E5E7EB;
-    border-radius: 4px;
-}
-.skeleton-bar.w-100 { width: 100%; }
-.skeleton-bar.w-75 { width: 75%; }
-.skeleton-bar.w-50 { width: 50%; }
-.skeleton-bar.w-85 { width: 85%; }
-
-/* Floating Decorative SaaS Badges (No Numbers) */
-.floating-mockup-badge {
-    position: absolute;
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 1.2rem 1.6rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+/* Individual Stacked Card: 12px radius, 1px border, soft shadow, hover lift */
+.hero-service-card {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    z-index: 2;
-    transition: transform var(--transition-base);
+    gap: 1.6rem;
+    padding: 1.8rem 2.2rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.28s ease;
+    animation: heroCardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.floating-mockup-badge:hover {
-    transform: translateY(-2px);
+.hero-card-1 { animation-delay: 0.08s; }
+.hero-card-2 { animation-delay: 0.18s; }
+.hero-card-3 { animation-delay: 0.28s; }
+
+/* Hover Lift */
+.hero-service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 75, 36, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(255, 75, 36, 0.08);
 }
 
-.badge-top-right {
-    top: -18px;
-    right: -16px;
-}
-
-.badge-bottom-left {
-    bottom: -18px;
-    left: -16px;
-}
-
-.mockup-badge-icon {
-    width: 38px;
-    height: 38px;
+/* Orange Icon */
+.hero-card-icon {
+    width: 46px;
+    height: 46px;
     border-radius: 10px;
+    background: var(--brand-orange-light);
+    color: var(--brand-orange);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
+    flex-shrink: 0;
+    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
-.icon-orange {
-    background: var(--brand-orange-light);
+.hero-service-card:hover .hero-card-icon {
+    background: var(--brand-orange);
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* Card Content: Bold Title and Single Line Description */
+.hero-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-card-title {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--brand-charcoal);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+    transition: color var(--transition-fast);
+}
+
+.hero-service-card:hover .hero-card-title {
     color: var(--brand-orange);
 }
 
-.icon-charcoal {
-    background: #E5E7EB;
-    color: var(--brand-charcoal);
-}
-
-.mockup-badge-text strong {
-    display: block;
+.hero-card-text {
     font-size: 1.35rem;
-    color: var(--brand-charcoal);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.mockup-badge-text span {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
+/* Card Arrow Link Indicator */
+.hero-card-arrow {
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.hero-service-card:hover .hero-card-arrow {
+    transform: translateX(4px);
+    color: var(--brand-orange);
+}
+
+/* Fade in Cards on Load */
+@keyframes heroCardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================================
@@ -2097,7 +1959,16 @@ textarea.form-control {
         transition: none !important;
     }
 
-    .saas-window-frame:hover,
+    .hero-service-card {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .hero-service-card:hover,
+    .hero-service-card:hover .hero-card-icon,
+    .hero-service-card:hover .hero-card-arrow,
     .service-summary-card:hover,
     .package-card:hover,
     .why-card:hover,
@@ -2245,10 +2116,13 @@ textarea.form-control {
         font-size: 3.6rem;
     }
     
-    .badge-top-right,
-    .badge-bottom-left {
-        position: static;
-        margin-top: 1rem;
+    .hero-card-stack {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .hero-cards-backdrop {
+        inset: -12px -8px;
     }
 }
 
@@ -2282,6 +2156,32 @@ textarea.form-control {
         flex-direction: column;
         align-items: center;
         gap: 0.8rem;
+    }
+
+    .hero-card-stack {
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .hero-service-card {
+        padding: 1.4rem 1.6rem;
+        gap: 1.2rem;
+    }
+
+    .hero-card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.7rem;
+    }
+
+    .hero-card-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-card-text {
+        font-size: 1.25rem;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
 
     .section-title {

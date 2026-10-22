@@ -60,6 +60,9 @@
     <link rel="preload" href="./fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Main Minified Stylesheet -->
     <link rel="stylesheet" href="./css/style.min.css">
+    <!-- Preconnect for External Assets -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <!-- Non-blocking FontAwesome -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
@@ -92,7 +95,7 @@
         </nav>
     </header>
 
-    <!-- 1. Hero Section (Clean UI Mockup with NO numbers, NO wave graphic) -->
+    <!-- 1. Hero Section (Clean Services Card Stack) -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-grid">
@@ -123,110 +126,51 @@
                     </div>
                 </div>
 
-                <!-- Right: Clean SaaS UI Composition (Neutral illustration, strictly NO numbers) -->
-                <div class="hero-visual reveal-on-scroll" aria-hidden="true">
-                    <!-- Top Floating Decorative Card -->
-                    <div class="floating-mockup-badge badge-top-right">
-                        <div class="mockup-badge-icon icon-orange">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <div class="mockup-badge-text">
-                            <strong>ERP Integration Engine</strong>
-                            <span>Operational &amp; Active</span>
-                        </div>
-                    </div>
-
-                    <!-- Main Application Preview Frame -->
-                    <div class="saas-window-frame">
-                        <div class="saas-window-bar">
-                            <div class="saas-window-dots">
-                                <span class="saas-dot dot-red"></span>
-                                <span class="saas-dot dot-yellow"></span>
-                                <span class="saas-dot dot-green"></span>
+                <!-- Right: Clean Services Card Stack -->
+                <div class="hero-visual">
+                    <div class="hero-cards-backdrop" aria-hidden="true"></div>
+                    <div class="hero-card-stack">
+                        <!-- Card 1: Websites -->
+                        <a href="services.html" class="hero-service-card hero-card-1">
+                            <div class="hero-card-icon">
+                                <i class="fas fa-laptop-code"></i>
                             </div>
-                            <div class="saas-url-bar">
-                                <i class="fas fa-lock"></i>
-                                <span>gitcorex.internal/platform/overview</span>
+                            <div class="hero-card-content">
+                                <span class="hero-card-title">Websites</span>
+                                <p class="hero-card-text">Fast, responsive websites built to convert</p>
                             </div>
-                            <div style="width: 24px;"></div>
-                        </div>
-
-                        <div class="saas-window-content">
-                            <!-- App Header -->
-                            <div class="mockup-app-header">
-                                <div class="mockup-app-brand">
-                                    <div class="mockup-brand-icon">
-                                        <i class="fas fa-cube"></i>
-                                    </div>
-                                    <span>gitCoreX Unified Platform</span>
-                                </div>
-                                <div class="mockup-status-tag">
-                                    <span class="status-pulse"></span>
-                                    <span>Systems Connected</span>
-                                </div>
+                            <div class="hero-card-arrow" aria-hidden="true">
+                                <i class="fas fa-arrow-right"></i>
                             </div>
+                        </a>
 
-                            <!-- Architecture Pipeline Flow (No numbers) -->
-                            <div class="mockup-pipeline-card">
-                                <div class="mockup-card-title">
-                                    <span>Service &amp; Data Pipeline</span>
-                                    <span class="mockup-card-tag">Synchronized</span>
-                                </div>
-                                <div class="mockup-nodes-flow">
-                                    <div class="flow-node">
-                                        <i class="fas fa-globe"></i>
-                                        Web Storefront
-                                    </div>
-                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                                    <div class="flow-node">
-                                        <i class="fas fa-code-branch"></i>
-                                        API Gateway
-                                    </div>
-                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                                    <div class="flow-node">
-                                        <i class="fas fa-database"></i>
-                                        ERP Core
-                                    </div>
-                                </div>
+                        <!-- Card 2: ERP Solutions -->
+                        <a href="erp.html" class="hero-service-card hero-card-2">
+                            <div class="hero-card-icon">
+                                <i class="fas fa-cogs"></i>
                             </div>
-
-                            <!-- Modules Grid with Clean Skeleton Bars (No numbers) -->
-                            <div class="mockup-modules-grid">
-                                <div class="mockup-module-box">
-                                    <div class="mockup-box-head">
-                                        <i class="fas fa-warehouse"></i>
-                                        <span>Inventory Sync</span>
-                                    </div>
-                                    <div class="skeleton-lines">
-                                        <div class="skeleton-bar w-100"></div>
-                                        <div class="skeleton-bar w-75"></div>
-                                        <div class="skeleton-bar w-50"></div>
-                                    </div>
-                                </div>
-                                <div class="mockup-module-box">
-                                    <div class="mockup-box-head">
-                                        <i class="fas fa-file-invoice-dollar"></i>
-                                        <span>Automated Invoicing</span>
-                                    </div>
-                                    <div class="skeleton-lines">
-                                        <div class="skeleton-bar w-85"></div>
-                                        <div class="skeleton-bar w-100"></div>
-                                        <div class="skeleton-bar w-50"></div>
-                                    </div>
-                                </div>
+                            <div class="hero-card-content">
+                                <span class="hero-card-title">ERP Solutions</span>
+                                <p class="hero-card-text">Sales, inventory, accounts and HR in one system</p>
                             </div>
-                        </div>
-                    </div>
+                            <div class="hero-card-arrow" aria-hidden="true">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
 
-                    <!-- Bottom Floating Decorative Card -->
-                    <div class="floating-mockup-badge badge-bottom-left">
-                        <div class="mockup-badge-icon icon-charcoal">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="mockup-badge-text">
-                            <strong>Secure Web Architecture</strong>
-                            <span>Enterprise Protected</span>
-                        </div>
+                        <!-- Card 3: Digital Solutions -->
+                        <a href="services.html" class="hero-service-card hero-card-3">
+                            <div class="hero-card-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <div class="hero-card-content">
+                                <span class="hero-card-title">Digital Solutions</span>
+                                <p class="hero-card-text">Automation, integrations and custom web apps</p>
+                            </div>
+                            <div class="hero-card-arrow" aria-hidden="true">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
