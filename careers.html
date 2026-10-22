@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at gitCoreX — Technical Openings</title>
+    <meta name="description" content="Explore technical career opportunities at gitCoreX in website development, custom web applications, UI/UX design, and enterprise ERP engineering in Bengaluru, Karnataka, India.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.gitcorex.in/careers.html">
+    
+    <!-- Open Graph & Twitter Sharing Metadata -->
+    <meta property="og:title" content="Careers at gitCoreX — Technical Openings">
+    <meta property="og:description" content="Explore technical career opportunities at gitCoreX in website development, custom web applications, UI/UX design, and enterprise ERP engineering in Bengaluru, Karnataka, India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gitcorex.in/careers.html">
+    <meta property="og:image" content="https://www.gitcorex.in/images/gitcorex-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Careers at gitCoreX — Technical Openings">
+    <meta name="twitter:description" content="Explore technical career opportunities at gitCoreX in website development, custom web applications, UI/UX design, and enterprise ERP engineering in Bengaluru, Karnataka, India.">
+    <meta name="twitter:image" content="https://www.gitcorex.in/images/gitcorex-logo.png">
+    
+    <!-- Favicon (WebP with PNG fallback) -->
+    <link rel="icon" type="image/webp" href="./images/favicon.webp">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- Self-hosted Fonts loaded via CSS & Icons -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Core Application Script -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Shared Header -->
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="gitCoreX Home">
+            <picture>
+                <source srcset="./images/gitcorex-logo.webp" type="image/webp">
+                <img src="./images/gitcorex-logo.png" alt="gitCoreX Logo" width="180" height="38" loading="eager" fetchpriority="high">
+            </picture>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" id="primaryNavbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="erp.html">ERP</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="careers.html" class="active">Career</a></li>
+                <li><a href="contact.html" class="btn btn-primary nav-cta-btn">Get a Free Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content reveal-on-scroll">
+                <span class="section-eyebrow">Engineering Careers</span>
+                <h1 class="page-hero-title">Careers at gitCoreX</h1>
+                <p class="page-hero-subtitle">
+                    Build high-performance web applications and enterprise ERP solutions with an engineering team dedicated to clean architecture, modern standards, and disciplined execution.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Opportunities & Application Form -->
+    <section class="section section-light" id="career-form-section">
+        <div class="container">
+            <div class="career-layout">
+                
+                <div class="contact-form-panel reveal-on-scroll">
+                    <div class="form-header">
+                        <h2>Submit Your Technical Application</h2>
+                        <p>We are always eager to connect with capable software engineers, ERP specialists, and UI/UX designers.</p>
+                    </div>
+
+                    <form id="careerForm" novalidate>
+                        <!-- Web3Forms Anti-spam Honeypot (botcheck) -->
+                        <input type="checkbox" name="botcheck" id="careerBotcheck" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <!-- Name & Phone -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="careerName" class="form-label">Full Name <span class="required">*</span></label>
+                                <input type="text" id="careerName" name="name" class="form-control" placeholder="e.g. Rahul Sharma" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="careerPhone" class="form-label">Contact Number (10 digits) <span class="required">*</span></label>
+                                <input type="tel" id="careerPhone" name="phone" class="form-control" placeholder="e.g. 9900020043" pattern="[0-9]{10}" maxlength="10" required aria-required="true">
+                            </div>
+                        </div>
+
+                        <!-- Email & Experience -->
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="careerEmail" class="form-label">Email Address <span class="required">*</span></label>
+                                <input type="email" id="careerEmail" name="email" class="form-control" placeholder="e.g. rahul@example.com" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="careerExperience" class="form-label">Years of Relevant Experience <span class="required">*</span></label>
+                                <input type="number" id="careerExperience" name="experience" min="0" max="40" class="form-control" placeholder="e.g. 3" required aria-required="true">
+                            </div>
+                        </div>
+
+                        <!-- Role Selection (Radio Grid) -->
+                        <div class="form-group">
+                            <label class="form-label">Position of Interest <span class="required">*</span></label>
+                            <div class="career-roles-options">
+                                <label class="role-radio-label">
+                                    <input type="radio" name="status" value="Web Developer" checked="checked">
+                                    <span>Web Developer (Front-End / Full-Stack)</span>
+                                </label>
+                                <label class="role-radio-label">
+                                    <input type="radio" name="status" value="ERP Developer / Specialist">
+                                    <span>ERP Developer / Specialist</span>
+                                </label>
+                                <label class="role-radio-label">
+                                    <input type="radio" name="status" value="Web & UI/UX Designer">
+                                    <span>Web &amp; UI/UX Designer</span>
+                                </label>
+                                <label class="role-radio-label">
+                                    <input type="radio" name="status" value="Mobile App Developer">
+                                    <span>Mobile App Developer</span>
+                                </label>
+                                <label class="role-radio-label" style="grid-column: 1 / -1;">
+                                    <input type="radio" name="status" value="Digital Solutions Specialist">
+                                    <span>Digital Solutions &amp; Integration Specialist</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Background & Technical Skills -->
+                        <div class="form-group">
+                            <label for="careerDetails" class="form-label">Background &amp; Technical Skills Summary <span class="required">*</span></label>
+                            <textarea id="careerDetails" name="details" class="form-control" placeholder="Outline your key technology stacks, past projects, database experience, or architectural proficiencies..." required aria-required="true"></textarea>
+                        </div>
+
+                        <!-- Resume Submission Notice & Mailto Link -->
+                        <div class="form-group">
+                            <label class="form-label">Resume Submission</label>
+                            <div class="resume-instruction-box" style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: var(--space-3); margin-bottom: var(--space-2);">
+                                <div style="display: flex; align-items: flex-start; gap: 1.2rem;">
+                                    <div style="width: 42px; height: 42px; background: var(--brand-orange-light); color: var(--brand-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0;">
+                                        <i class="fas fa-envelope-open-text"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <p style="font-size: 1.45rem; font-weight: 600; color: var(--brand-charcoal); margin-bottom: 0.4rem;">
+                                            Email your resume to <a href="mailto:gitcorex26@gmail.com?subject=gitCoreX%20Career%20Application%20Resume%20-%20Web%20Developer" class="text-brand-accent" id="resumeDirectLink">gitcorex26@gmail.com</a> after submitting this form.
+                                        </p>
+                                        <p style="font-size: 1.35rem; color: var(--text-secondary); margin-bottom: 1.2rem; line-height: 1.5;">
+                                            Attach your updated resume (PDF or DOC) referencing your applied position in the email subject line.
+                                        </p>
+                                        <a href="mailto:gitcorex26@gmail.com?subject=gitCoreX%20Career%20Application%20Resume%20-%20Web%20Developer" id="careerResumeMailto" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.8rem;">
+                                            <i class="fas fa-paperclip"></i> <span id="mailtoBtnText">Email Resume for Web Developer</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inline Form Status Alert -->
+                        <div id="careerFormStatus" class="form-status-alert" style="display:none; margin-bottom: var(--space-4);" role="alert" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="careerSubmitBtn">
+                            <i class="fas fa-paper-plane"></i> <span>Submit Application</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <div class="container footer-content-wrap">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-brand">
+                    <a href="index.html" class="footer-logo">
+                        <picture>
+                            <source srcset="./images/gitcorex-logo-footer.webp" type="image/webp">
+                            <img src="./images/gitcorex-logo-footer.png" alt="gitCoreX Logo" width="180" height="38" loading="lazy">
+                        </picture>
+                    </a>
+                    <p class="footer-desc">
+                        gitCoreX delivers modern website development, custom web applications, and business ERP solutions to help organizations strengthen their digital presence and streamline operations.
+                    </p>
+                    <div class="footer-meta-pill">
+                        <strong>GSTIN:</strong> 29FBAPR5805L1Z5
+                    </div>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="erp.html">ERP Solutions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Career</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Solutions</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="services.html#corporate">Corporate Websites</a></li>
+                        <li><a href="services.html#ecommerce">E-Commerce Stores</a></li>
+                        <li><a href="services.html#webapps">Custom Web Apps</a></li>
+                        <li><a href="erp.html#inventory">Inventory &amp; Stock</a></li>
+                        <li><a href="erp.html#accounting">Accounting &amp; Invoicing</a></li>
+                        <li><a href="erp.html#workflows">Workflow Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact gitCoreX</h3>
+                    <div class="footer-contact-block">
+                        <p class="contact-line">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919900020043">+91 9900020043</a>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:gitcorex26@gmail.com">gitcorex26@gmail.com</a>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bengaluru, Karnataka, India</span>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-clock"></i>
+                            <span>We reply within 24 hours</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>gitCoreX</strong>. All Rights Reserved. &bull; Bengaluru, Karnataka, India
+                </p>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="separator">&bull;</span>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Click-to-Chat Button (Bottom Left) -->
+    <a href="https://wa.me/919900020043" class="whatsapp-chat-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with gitCoreX on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Sticky Free Consultation Floating Button -->
+    <a href="contact.html" class="sticky-consultation-btn" aria-label="Get a Free Consultation">
+        <i class="fas fa-calendar-check"></i>
+        <span>Free Consultation</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+</body>
+</html>

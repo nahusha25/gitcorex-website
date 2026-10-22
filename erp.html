@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise ERP Solutions | gitCoreX</title>
+    <meta name="description" content="Modular, customizable enterprise ERP solutions for sales, purchasing, inventory, GST invoicing, HR, and workflow automation by gitCoreX in Bengaluru, Karnataka, India.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.gitcorex.in/erp.html">
+    
+    <!-- Open Graph & Twitter Sharing Metadata -->
+    <meta property="og:title" content="Enterprise ERP Solutions | gitCoreX">
+    <meta property="og:description" content="Modular, customizable enterprise ERP solutions for sales, purchasing, inventory, GST invoicing, HR, and workflow automation by gitCoreX in Bengaluru, Karnataka, India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gitcorex.in/erp.html">
+    <meta property="og:image" content="https://www.gitcorex.in/images/gitcorex-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enterprise ERP Solutions | gitCoreX">
+    <meta name="twitter:description" content="Modular, customizable enterprise ERP solutions for sales, purchasing, inventory, GST invoicing, HR, and workflow automation by gitCoreX in Bengaluru, Karnataka, India.">
+    <meta name="twitter:image" content="https://www.gitcorex.in/images/gitcorex-logo.png">
+    
+    <!-- Favicon (WebP with PNG fallback) -->
+    <link rel="icon" type="image/webp" href="./images/favicon.webp">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <!-- Self-hosted Fonts loaded via CSS & Icons -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Core Application Script -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Shared Header -->
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="gitCoreX Home">
+            <picture>
+                <source srcset="./images/gitcorex-logo.webp" type="image/webp">
+                <img src="./images/gitcorex-logo.png" alt="gitCoreX Logo" width="180" height="38" loading="eager" fetchpriority="high">
+            </picture>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" id="primaryNavbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="erp.html" class="active">ERP</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="careers.html">Career</a></li>
+                <li><a href="contact.html" class="btn btn-primary nav-cta-btn">Get a Free Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content reveal-on-scroll">
+                <span class="section-eyebrow">Enterprise Business Systems</span>
+                <h1 class="page-hero-title">ERP Solutions Designed Around Your Business</h1>
+                <p class="page-hero-subtitle">
+                    Streamline operations, eliminate departmental bottlenecks, and gain operational visibility with modular ERP systems configured specifically around your workflows.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core ERP Modules (Moved from previous homepage) -->
+    <section class="section section-white" id="modules">
+        <div class="container">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="section-eyebrow">Modular Architecture</span>
+                <h2 class="section-title">Core ERP Capabilities</h2>
+                <p class="section-subtitle">
+                    Each module functions cohesively within a unified database structure, eliminating data redundancy and manual re-entry.
+                </p>
+            </div>
+
+            <div class="erp-modules-grid">
+                <!-- 1. Sales & Purchase Management -->
+                <div class="erp-module-card reveal-on-scroll">
+                    <span class="erp-card-category">Commercial</span>
+                    <div class="erp-card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Sales &amp; Purchase Management</h3>
+                    <p>
+                        Configure end-to-end sales pipelines and procurement workflows—from initial quotation drafting and purchase orders to supplier invoice verification and customer fulfillment tracking.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Sales &amp; Purchase</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 2. Inventory & Stock Management -->
+                <div class="erp-module-card reveal-on-scroll" id="inventory">
+                    <span class="erp-card-category">Operations</span>
+                    <div class="erp-card-icon"><i class="fas fa-warehouse"></i></div>
+                    <h3>Inventory &amp; Stock Management</h3>
+                    <p>
+                        Track multi-warehouse inventory levels, batch and serial numbers, automated minimum-stock reorder alerts, material transfers, and real-time inventory valuations across all storage facilities.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Stock Management</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 3. Accounting & Invoicing -->
+                <div class="erp-module-card reveal-on-scroll" id="accounting">
+                    <span class="erp-card-category">Financial</span>
+                    <div class="erp-card-icon"><i class="fas fa-calculator"></i></div>
+                    <h3>Accounting &amp; Invoicing</h3>
+                    <p>
+                        Consolidate general ledgers, accounts payable/receivable, automated GST billing, bank reconciliations, expense tracking, and transparent financial reporting in one central environment.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Invoicing</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 4. HR & Employee Management -->
+                <div class="erp-module-card reveal-on-scroll">
+                    <span class="erp-card-category">Human Capital</span>
+                    <div class="erp-card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>HR &amp; Employee Management</h3>
+                    <p>
+                        Maintain structured digital employee profiles, departmental reporting hierarchies, attendance logs, leave approval requests, performance milestones, and internal notices.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About HR Systems</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 5. Payroll Management -->
+                <div class="erp-module-card reveal-on-scroll">
+                    <span class="erp-card-category">Payroll</span>
+                    <div class="erp-card-icon"><i class="fas fa-money-check-alt"></i></div>
+                    <h3>Payroll Management</h3>
+                    <p>
+                        Standardize compensation structures, automate tax and benefit deductions, generate detailed employee pay slips, and maintain complete payroll compliance audit trails.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Payroll</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 6. Workflow Automation -->
+                <div class="erp-module-card reveal-on-scroll" id="workflows">
+                    <span class="erp-card-category">Productivity</span>
+                    <div class="erp-card-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Workflow Automation</h3>
+                    <p>
+                        Eliminate cross-departmental communication stalls with automated multi-tier approval paths, event-driven triggers, system status notifications, and pending action reminders.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Automation</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 7. Reporting & Operational Visibility -->
+                <div class="erp-module-card reveal-on-scroll">
+                    <span class="erp-card-category">Intelligence</span>
+                    <div class="erp-card-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Reporting &amp; Operational Visibility</h3>
+                    <p>
+                        Gain actionable business insights through structured summary reports, operational status boards, exportable spreadsheets, and real-time activity audit histories.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Reporting</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- 8. Integrations & Customization -->
+                <div class="erp-module-card reveal-on-scroll">
+                    <span class="erp-card-category">Integrations</span>
+                    <div class="erp-card-icon"><i class="fas fa-sliders-h"></i></div>
+                    <h3>Integrations &amp; Customization</h3>
+                    <p>
+                        Tailor data entities, custom fields, and API hooks to connect seamlessly with your e-commerce storefronts, payment gateways, barcode scanners, and external databases.
+                    </p>
+                    <a href="contact.html?service=erp" class="card-cta-link" style="margin-top: 1.6rem;">
+                        <span>Inquire About Integrations</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERP Implementation Methodology -->
+    <section class="section section-light" id="methodology">
+        <div class="container">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="section-eyebrow">Implementation Roadmap</span>
+                <h2 class="section-title">How We Deploy Your ERP System</h2>
+                <p class="section-subtitle">
+                    A disciplined implementation lifecycle designed to minimize operational disruption and guarantee user adoption.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step-card reveal-on-scroll">
+                    <div class="step-number-pill">01</div>
+                    <h4>Workflow Audit</h4>
+                    <p>We document your current operational processes, departmental handoffs, and data structures.</p>
+                </div>
+                <div class="process-step-card reveal-on-scroll">
+                    <div class="step-number-pill">02</div>
+                    <h4>Architecture</h4>
+                    <p>We map your business workflows into modular ERP configurations, roles, and security policies.</p>
+                </div>
+                <div class="process-step-card reveal-on-scroll">
+                    <div class="step-number-pill">03</div>
+                    <h4>Data Migration</h4>
+                    <p>We scrub, format, and migrate legacy records, customer rosters, inventory data, and ledgers.</p>
+                </div>
+                <div class="process-step-card reveal-on-scroll">
+                    <div class="step-number-pill">04</div>
+                    <h4>Staff Onboarding</h4>
+                    <p>We provide comprehensive staff walkthroughs, role-specific documentation, and sandbox practice.</p>
+                </div>
+                <div class="process-step-card reveal-on-scroll">
+                    <div class="step-number-pill">05</div>
+                    <h4>Live Support</h4>
+                    <p>We oversee production rollout with real-time technical monitoring and continuous operational care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Options (Cloud / VPS / On-Premise) -->
+    <section class="section section-white" id="deployment">
+        <div class="container">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="section-eyebrow">Infrastructure Flexibility</span>
+                <h2 class="section-title">Deployment Options to Match Your Security Policies</h2>
+                <p class="section-subtitle">
+                    Deploy your gitCoreX ERP system according to your organizational governance and IT infrastructure requirements.
+                </p>
+            </div>
+
+            <div class="about-pillars-grid">
+                <div class="about-pillar-card reveal-on-scroll">
+                    <h3><i class="fas fa-cloud"></i> Managed Cloud Deployment</h3>
+                    <p>
+                        High-availability cloud hosting with automated daily backups, SSL/TLS encryption, and proactive security monitoring. Ideal for distributed teams and multi-branch operations needing reliable access from any secure device.
+                    </p>
+                </div>
+
+                <div class="about-pillar-card reveal-on-scroll">
+                    <h3><i class="fas fa-server"></i> Dedicated Server or On-Premise</h3>
+                    <p>
+                        Full deployment within your organization's private virtual server or on-premise hardware behind your corporate firewall. Provides total internal governance, data residency compliance, and local network control.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Banner (Charcoal) -->
+    <section class="cta-banner-section reveal-on-scroll">
+        <div class="container">
+            <div class="cta-banner-content">
+                <h2>Ready to Explore an ERP System for Your Organization?</h2>
+                <p>
+                    Schedule an exploratory consultation with gitCoreX in Bengaluru, Karnataka, India. We will walk through your workflows and discuss how a customized ERP can elevate your operations.
+                </p>
+                <div class="cta-banner-actions">
+                    <a href="contact.html?service=erp" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Request an ERP Discovery Call
+                    </a>
+                    <a href="tel:+919900020043" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone-alt"></i> Call +91 9900020043
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <div class="container footer-content-wrap">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-brand">
+                    <a href="index.html" class="footer-logo">
+                        <picture>
+                            <source srcset="./images/gitcorex-logo-footer.webp" type="image/webp">
+                            <img src="./images/gitcorex-logo-footer.png" alt="gitCoreX Logo" width="180" height="38" loading="lazy">
+                        </picture>
+                    </a>
+                    <p class="footer-desc">
+                        gitCoreX delivers modern website development, custom web applications, and business ERP solutions to help organizations strengthen their digital presence and streamline operations.
+                    </p>
+                    <div class="footer-meta-pill">
+                        <strong>GSTIN:</strong> 29FBAPR5805L1Z5
+                    </div>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="erp.html">ERP Solutions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Career</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Solutions</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="services.html#corporate">Corporate Websites</a></li>
+                        <li><a href="services.html#ecommerce">E-Commerce Stores</a></li>
+                        <li><a href="services.html#webapps">Custom Web Apps</a></li>
+                        <li><a href="erp.html#inventory">Inventory &amp; Stock</a></li>
+                        <li><a href="erp.html#accounting">Accounting &amp; Invoicing</a></li>
+                        <li><a href="erp.html#workflows">Workflow Automation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact gitCoreX</h3>
+                    <div class="footer-contact-block">
+                        <p class="contact-line">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919900020043">+91 9900020043</a>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:gitcorex26@gmail.com">gitcorex26@gmail.com</a>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bengaluru, Karnataka, India</span>
+                        </p>
+                        <p class="contact-line">
+                            <i class="fas fa-clock"></i>
+                            <span>We reply within 24 hours</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>gitCoreX</strong>. All Rights Reserved. &bull; Bengaluru, Karnataka, India
+                </p>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="separator">&bull;</span>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Click-to-Chat Button (Bottom Left) -->
+    <a href="https://wa.me/919900020043" class="whatsapp-chat-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with gitCoreX on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Sticky Free Consultation Floating Button -->
+    <a href="contact.html" class="sticky-consultation-btn" aria-label="Get a Free Consultation">
+        <i class="fas fa-calendar-check"></i>
+        <span>Free Consultation</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+</body>
+</html>
