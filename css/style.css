@@ -530,14 +530,178 @@ p:last-child {
    HERO SECTION
    ============================================================ */
 .hero {
+    position: relative;
     padding-top: calc(72px + var(--space-8));
     padding-bottom: calc(var(--space-10) + 40px);
-    background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
-    position: relative;
+    background: #FFFFFF;
     overflow: hidden;
 }
 
+.hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ambient Modern Tech Grid & Radiant Glow Mesh */
+.hero-bg-ambient {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Subtle Engineering Coordinate Grid with Radial Vignette Mask */
+.hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(32, 33, 36, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(32, 33, 36, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center top;
+    -webkit-mask-image: radial-gradient(ellipse 85% 65% at 50% 25%, #000000 35%, transparent 82%);
+    mask-image: radial-gradient(ellipse 85% 65% at 50% 25%, #000000 35%, transparent 82%);
+}
+
+/* Radiant Ambient Mesh Orbs */
+.hero-ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+}
+
+/* Primary Orange Aura (Upper Right - behind hero cards) */
+.hero-orb-1 {
+    top: -80px;
+    right: 3%;
+    width: 580px;
+    height: 580px;
+    background: radial-gradient(circle, rgba(255, 75, 36, 0.17) 0%, rgba(255, 120, 80, 0.07) 45%, transparent 70%);
+    filter: blur(65px);
+    -webkit-filter: blur(65px);
+    animation: floatOrb1 14s ease-in-out infinite alternate;
+}
+
+/* Secondary Warm Peach Aura (Upper Left - behind headline) */
+.hero-orb-2 {
+    top: 30px;
+    left: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 120, 80, 0.12) 0%, rgba(255, 75, 36, 0.04) 50%, transparent 72%);
+    filter: blur(55px);
+    -webkit-filter: blur(55px);
+    animation: floatOrb2 18s ease-in-out infinite alternate;
+}
+
+/* Tertiary Center Ambient Light (Under CTAs) */
+.hero-orb-3 {
+    bottom: 80px;
+    left: 32%;
+    width: 440px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255, 75, 36, 0.07) 0%, rgba(255, 150, 100, 0.02) 55%, transparent 75%);
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+    animation: floatOrb3 20s ease-in-out infinite alternate;
+}
+
+/* Subtle Precision Engineering Crosshairs (+) */
+.hero-grid-cross {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.hero-grid-cross::before,
+.hero-grid-cross::after {
+    content: '';
+    position: absolute;
+    background: var(--brand-orange);
+}
+
+.hero-grid-cross::before {
+    top: 6px;
+    left: 0;
+    width: 13px;
+    height: 1px;
+}
+
+.hero-grid-cross::after {
+    top: 0;
+    left: 6px;
+    width: 1px;
+    height: 13px;
+}
+
+.cross-1 {
+    top: 22%;
+    left: 10%;
+}
+
+.cross-2 {
+    top: 16%;
+    right: 48%;
+}
+
+.cross-3 {
+    top: 54%;
+    right: 12%;
+}
+
+/* Smooth Floating Keyframes */
+@keyframes floatOrb1 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(-30px, 25px, 0) scale(1.06);
+    }
+    100% {
+        transform: translate3d(20px, -20px, 0) scale(0.96);
+    }
+}
+
+@keyframes floatOrb2 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(25px, -30px, 0) scale(1.08);
+    }
+    100% {
+        transform: translate3d(-20px, 20px, 0) scale(0.94);
+    }
+}
+
+@keyframes floatOrb3 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(-20px, -25px, 0) scale(1.05);
+    }
+    100% {
+        transform: translate3d(25px, 15px, 0) scale(0.95);
+    }
+}
+
+/* Motion Sensitivity */
+@media (prefers-reduced-motion: reduce) {
+    .hero-orb-1,
+    .hero-orb-2,
+    .hero-orb-3 {
+        animation: none;
+    }
+}
+
 .hero-grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1.15fr 0.95fr;
     gap: var(--space-6);
@@ -2433,6 +2597,32 @@ textarea.form-control {
     .hero-card-tag {
         font-size: 1.1rem;
         padding: 0.3rem 0.7rem;
+    }
+
+    .hero-bg-grid {
+        background-size: 32px 32px;
+    }
+
+    .hero-orb-1 {
+        width: 320px;
+        height: 320px;
+        right: -40px;
+        top: -40px;
+    }
+
+    .hero-orb-2 {
+        width: 260px;
+        height: 260px;
+        left: -40px;
+        top: 20px;
+    }
+
+    .hero-orb-3 {
+        display: none;
+    }
+
+    .hero-grid-cross {
+        display: none;
     }
 
     .section-title {
