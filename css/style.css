@@ -808,9 +808,10 @@ p:last-child {
     gap: 1.6rem;
     width: 100%;
     max-width: 500px;
+    perspective: 1200px;
 }
 
-/* Individual Stacked Card: 14px radius, 1px border, soft shadow, hover lift */
+/* Individual Stacked Card: 3D perspective, 14px radius, 1px border, soft shadow, hover lift */
 .hero-service-card {
     position: relative;
     display: flex;
@@ -826,10 +827,33 @@ p:last-child {
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 border-color 0.28s ease;
     animation: heroCardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-service-card.is-tilting {
+    transition: transform 0.06s linear, box-shadow 0.3s ease, border-color 0.28s ease;
+}
+
+/* Specular 3D Glare Light */
+.hero-card-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle 280px at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.hero-service-card:hover .hero-card-glare {
+    opacity: 1;
 }
 
 /* Radiant accent line at the top of each card */
@@ -850,11 +874,10 @@ p:last-child {
 .hero-card-2 { animation-delay: 0.18s; }
 .hero-card-3 { animation-delay: 0.28s; }
 
-/* Hover Lift & Glow */
+/* Hover Lift & 3D Glow */
 .hero-service-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 75, 36, 0.35);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 4px 18px rgba(255, 75, 36, 0.12);
+    border-color: rgba(255, 75, 36, 0.40);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.09), 0 6px 20px rgba(255, 75, 36, 0.14);
 }
 
 .hero-service-card:hover::before {
@@ -868,11 +891,15 @@ p:last-child {
     align-items: center;
     gap: 1.4rem;
     width: 100%;
+    transform-style: preserve-3d;
 }
 
-/* Orange Icon Container */
+/* Orange Icon Container - Floating 3D Z-Depth */
 .hero-card-icon-wrap {
     flex-shrink: 0;
+    transform: translateZ(26px);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
 }
 
 .hero-card-icon {
@@ -901,6 +928,7 @@ p:last-child {
 .hero-card-heading-group {
     flex: 1;
     min-width: 0;
+    transform-style: preserve-3d;
 }
 
 .hero-card-top-meta {
@@ -909,6 +937,8 @@ p:last-child {
     gap: 0.8rem;
     margin-bottom: 0.3rem;
     flex-wrap: wrap;
+    transform: translateZ(20px);
+    transform-style: preserve-3d;
 }
 
 .hero-card-title {
@@ -940,11 +970,16 @@ p:last-child {
     color: var(--text-secondary);
     line-height: 1.4;
     margin: 0;
+    transform: translateZ(16px);
+    transform-style: preserve-3d;
 }
 
-/* Arrow Link Indicator */
+/* Arrow Link Indicator - Elevated 3D Z-Depth */
 .hero-card-arrow-wrap {
     flex-shrink: 0;
+    transform: translateZ(30px);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
 }
 
 .hero-card-arrow {
@@ -977,6 +1012,8 @@ p:last-child {
     flex-wrap: wrap;
     padding-top: 0.8rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateZ(18px);
+    transform-style: preserve-3d;
 }
 
 .hero-card-tag {
@@ -2597,6 +2634,22 @@ textarea.form-control {
     .hero-card-tag {
         font-size: 1.1rem;
         padding: 0.3rem 0.7rem;
+    }
+
+    .hero-service-card {
+        transform: none !important;
+    }
+
+    .hero-card-icon-wrap,
+    .hero-card-top-meta,
+    .hero-card-text,
+    .hero-card-arrow-wrap,
+    .hero-card-tags {
+        transform: none !important;
+    }
+
+    .hero-card-glare {
+        display: none !important;
     }
 
     .hero-bg-grid {

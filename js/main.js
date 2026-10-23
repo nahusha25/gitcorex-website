@@ -519,4 +519,61 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // 9. Interactive 3D Card Parallax Tilt & Specular Glare (60fps GPU-accelerated)
+    function init3DCardTilt() {
+        const isHoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!isHoverCapable || prefersReducedMotion || window.innerWidth < 768) {
+            return;
+        }
+
+        const tiltCards = document.querySelectorAll('.hero-service-card, [data-tilt]');
+        tiltCards.forEach(function (card) {
+            let rafId = null;
+            let bounds = null;
+
+            function onPointerEnter() {
+                bounds = card.getBoundingClientRect();
+                card.classList.add('is-tilting');
+            }
+
+            function onPointerMove(e) {
+                if (!bounds) bounds = card.getBoundingClientRect();
+                const mouseX = e.clientX - bounds.left;
+                const mouseY = e.clientY - bounds.top;
+
+                // Normalized coordinate: -0.5 to 0.5
+                const percentX = (mouseX / bounds.width) - 0.5;
+                const percentY = (mouseY / bounds.height) - 0.5;
+
+                // Subtle, tactile 3D tilt: max ~12 degrees
+                const tiltX = (percentY * -12).toFixed(2);
+                const tiltY = (percentX * 12).toFixed(2);
+
+                const glareX = ((mouseX / bounds.width) * 100).toFixed(1);
+                const glareY = ((mouseY / bounds.height) * 100).toFixed(1);
+
+                if (rafId) cancelAnimationFrame(rafId);
+                rafId = requestAnimationFrame(function () {
+                    card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px) scale3d(1.02, 1.02, 1.02)`;
+                    card.style.setProperty('--glare-x', glareX + '%');
+                    card.style.setProperty('--glare-y', glareY + '%');
+                });
+            }
+
+            function onPointerLeave() {
+                if (rafId) cancelAnimationFrame(rafId);
+                card.classList.remove('is-tilting');
+                card.style.transform = '';
+                bounds = null;
+            }
+
+            card.addEventListener('pointerenter', onPointerEnter);
+            card.addEventListener('pointermove', onPointerMove);
+            card.addEventListener('pointerleave', onPointerLeave);
+        });
+    }
+
+    init3DCardTilt();
+
 });
