@@ -383,15 +383,11 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateCareerMailto() {
             const selectedRadio = careerForm.querySelector('input[name="status"]:checked');
             const role = selectedRadio ? selectedRadio.value : 'Web Developer';
-            const mailtoBtn = document.getElementById('careerResumeMailto');
             const mailtoDirect = document.getElementById('resumeDirectLink');
-            const mailtoBtnText = document.getElementById('mailtoBtnText');
             const subject = encodeURIComponent('gitCoreX Career Application Resume - ' + role);
             const href = 'mailto:gitcorex26@gmail.com?subject=' + subject;
 
-            if (mailtoBtn) mailtoBtn.href = href;
             if (mailtoDirect) mailtoDirect.href = href;
-            if (mailtoBtnText) mailtoBtnText.textContent = 'Email Resume for ' + role;
         }
 
         roleRadios.forEach(function (radio) {
