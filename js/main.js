@@ -65,7 +65,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 2. Sticky Header Elevation on Scroll
+    // 2. Sticky Header Elevation & Scroll Reading Progress on Scroll
+    const scrollProgressBar = document.getElementById('scrollProgressBar');
+
+    function updateScrollProgress() {
+        if (!scrollProgressBar) return;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+    }
+
     function handleHeaderScroll() {
         if (!header) return;
         if (window.scrollY > 20) {
@@ -74,8 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('header-scrolled');
         }
     }
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+
+    window.addEventListener('scroll', function () {
+        handleHeaderScroll();
+        updateScrollProgress();
+    }, { passive: true });
     handleHeaderScroll();
+    updateScrollProgress();
 
     // 3. Back to Top Button
     const backToTop = document.getElementById('backToTop');

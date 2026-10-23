@@ -71,6 +71,8 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
+    <!-- Top Reading Progress Indicator -->
+    <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
 
     <!-- Shared Header -->
     <header class="header">
@@ -126,49 +128,85 @@
                     </div>
                 </div>
 
-                <!-- Right: Clean Services Card Stack -->
+                <!-- Right: Elevated Services Showcase Stack -->
                 <div class="hero-visual">
                     <div class="hero-cards-backdrop" aria-hidden="true"></div>
                     <div class="hero-card-stack">
                         <!-- Card 1: Websites -->
-                        <a href="services.html" class="hero-service-card hero-card-1">
-                            <div class="hero-card-icon">
-                                <i class="fas fa-laptop-code"></i>
+                        <a href="services.html" class="hero-service-card hero-card-1" aria-label="Explore Website Development Services">
+                            <div class="hero-card-header">
+                                <div class="hero-card-icon-wrap">
+                                    <div class="hero-card-icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                </div>
+                                <div class="hero-card-heading-group">
+                                    <div class="hero-card-top-meta">
+                                        <span class="hero-card-title">Websites</span>
+                                        <span class="hero-card-badge">Engineered to Convert</span>
+                                    </div>
+                                    <p class="hero-card-text">Fast, responsive websites built to convert</p>
+                                </div>
+                                <div class="hero-card-arrow-wrap" aria-hidden="true">
+                                    <span class="hero-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                            <div class="hero-card-content">
-                                <span class="hero-card-title">Websites</span>
-                                <p class="hero-card-text">Fast, responsive websites built to convert</p>
-                            </div>
-                            <div class="hero-card-arrow" aria-hidden="true">
-                                <i class="fas fa-arrow-right"></i>
+                            <div class="hero-card-tags" aria-hidden="true">
+                                <span class="hero-card-tag"><i class="fas fa-bolt"></i> High Performance</span>
+                                <span class="hero-card-tag"><i class="fas fa-mobile-alt"></i> Mobile-First</span>
+                                <span class="hero-card-tag"><i class="fas fa-shield-alt"></i> Secure Architecture</span>
                             </div>
                         </a>
 
                         <!-- Card 2: ERP Solutions -->
-                        <a href="erp.html" class="hero-service-card hero-card-2">
-                            <div class="hero-card-icon">
-                                <i class="fas fa-cogs"></i>
+                        <a href="erp.html" class="hero-service-card hero-card-2" aria-label="Explore ERP Solutions">
+                            <div class="hero-card-header">
+                                <div class="hero-card-icon-wrap">
+                                    <div class="hero-card-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                </div>
+                                <div class="hero-card-heading-group">
+                                    <div class="hero-card-top-meta">
+                                        <span class="hero-card-title">ERP Solutions</span>
+                                        <span class="hero-card-badge">Unified Operations</span>
+                                    </div>
+                                    <p class="hero-card-text">Sales, inventory, accounts and HR in one system</p>
+                                </div>
+                                <div class="hero-card-arrow-wrap" aria-hidden="true">
+                                    <span class="hero-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                            <div class="hero-card-content">
-                                <span class="hero-card-title">ERP Solutions</span>
-                                <p class="hero-card-text">Sales, inventory, accounts and HR in one system</p>
-                            </div>
-                            <div class="hero-card-arrow" aria-hidden="true">
-                                <i class="fas fa-arrow-right"></i>
+                            <div class="hero-card-tags" aria-hidden="true">
+                                <span class="hero-card-tag"><i class="fas fa-boxes"></i> Inventory Control</span>
+                                <span class="hero-card-tag"><i class="fas fa-file-invoice-dollar"></i> Smart Invoicing</span>
+                                <span class="hero-card-tag"><i class="fas fa-users-cog"></i> HR &amp; Payroll</span>
                             </div>
                         </a>
 
                         <!-- Card 3: Digital Solutions -->
-                        <a href="services.html" class="hero-service-card hero-card-3">
-                            <div class="hero-card-icon">
-                                <i class="fas fa-sliders-h"></i>
+                        <a href="services.html#digital-solutions" class="hero-service-card hero-card-3" aria-label="Explore Digital Solutions & Automation">
+                            <div class="hero-card-header">
+                                <div class="hero-card-icon-wrap">
+                                    <div class="hero-card-icon">
+                                        <i class="fas fa-sliders-h"></i>
+                                    </div>
+                                </div>
+                                <div class="hero-card-heading-group">
+                                    <div class="hero-card-top-meta">
+                                        <span class="hero-card-title">Digital Solutions</span>
+                                        <span class="hero-card-badge">Automation &amp; Scale</span>
+                                    </div>
+                                    <p class="hero-card-text">Automation, integrations and custom web apps</p>
+                                </div>
+                                <div class="hero-card-arrow-wrap" aria-hidden="true">
+                                    <span class="hero-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                            <div class="hero-card-content">
-                                <span class="hero-card-title">Digital Solutions</span>
-                                <p class="hero-card-text">Automation, integrations and custom web apps</p>
-                            </div>
-                            <div class="hero-card-arrow" aria-hidden="true">
-                                <i class="fas fa-arrow-right"></i>
+                            <div class="hero-card-tags" aria-hidden="true">
+                                <span class="hero-card-tag"><i class="fas fa-network-wired"></i> REST APIs</span>
+                                <span class="hero-card-tag"><i class="fas fa-sync-alt"></i> Automated Flows</span>
+                                <span class="hero-card-tag"><i class="fas fa-cloud"></i> Custom Web Apps</span>
                             </div>
                         </a>
                     </div>
