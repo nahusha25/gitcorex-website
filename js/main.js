@@ -607,4 +607,161 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initExpandingPanels();
 
+    // 11. Interactive 5-Step Delivery Process Blueprint
+    function initProcessBlueprint() {
+        const navSteps = document.querySelectorAll('.blueprint-nav-step');
+        const panels = document.querySelectorAll('.blueprint-content-panel');
+        const progressFill = document.getElementById('blueprintProgressFill');
+        if (!navSteps.length || !panels.length) return;
+
+        function setBlueprintStep(targetIndex) {
+            const index = Math.max(0, Math.min(targetIndex, navSteps.length - 1));
+            
+            navSteps.forEach(function (step, i) {
+                const isActive = (i === index);
+                step.classList.toggle('is-active', isActive);
+                step.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                step.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            panels.forEach(function (panel, i) {
+                panel.classList.toggle('is-active', i === index);
+            });
+
+            if (progressFill) {
+                progressFill.style.width = (index * 25) + '%';
+            }
+        }
+
+        navSteps.forEach(function (btn, index) {
+            btn.addEventListener('click', function () {
+                setBlueprintStep(index);
+            });
+
+            btn.addEventListener('keydown', function (e) {
+                let nextIndex = index;
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    nextIndex = (index + 1) % navSteps.length;
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    nextIndex = (index - 1 + navSteps.length) % navSteps.length;
+                } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    nextIndex = 0;
+                } else if (e.key === 'End') {
+                    e.preventDefault();
+                    nextIndex = navSteps.length - 1;
+                }
+
+                if (nextIndex !== index) {
+                    setBlueprintStep(nextIndex);
+                    navSteps[nextIndex].focus();
+                }
+            });
+        });
+
+        // Initialize progress bar position
+        setBlueprintStep(0);
+    }
+
+    initProcessBlueprint();
+
+    // 12. Interactive Before vs. After Architecture Comparison Slider
+    function initBeforeAfterSlider() {
+        const sliderWrap = document.getElementById('comparisonSliderWrap');
+        const rangeInput = document.getElementById('comparisonRangeInput');
+        const presetBtns = document.querySelectorAll('.split-preset-btn');
+        if (!sliderWrap || !rangeInput) return;
+
+        function applySplit(value) {
+            const clamped = Math.max(0, Math.min(100, Number(value)));
+            sliderWrap.style.setProperty('--split-pos', clamped + '%');
+            rangeInput.value = clamped;
+            rangeInput.setAttribute('aria-valuenow', clamped);
+
+            presetBtns.forEach(function (btn) {
+                const presetVal = Number(btn.getAttribute('data-preset'));
+                btn.classList.toggle('is-active', Math.abs(presetVal - clamped) <= 2);
+            });
+        }
+
+        rangeInput.addEventListener('input', function (e) {
+            applySplit(e.target.value);
+        });
+
+        presetBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const targetVal = btn.getAttribute('data-preset');
+                if (targetVal !== null) {
+                    applySplit(targetVal);
+                }
+            });
+        });
+    }
+
+    initBeforeAfterSlider();
+
+    // 13. Interactive ERP Cockpit & Workflow Engine Switcher
+    function initErpExplorer() {
+        const tabBtns = document.querySelectorAll('.erp-tab-btn');
+        const stagePanels = document.querySelectorAll('.erp-cockpit-panel');
+        if (!tabBtns.length || !stagePanels.length) return;
+
+        const moduleToPanelId = {
+            'inventory': 'erp-panel-inv',
+            'accounting': 'erp-panel-acc',
+            'hr': 'erp-panel-hr',
+            'sales': 'erp-panel-sales'
+        };
+
+        function switchErpModule(moduleKey) {
+            const targetPanelId = moduleToPanelId[moduleKey] || 'erp-panel-inv';
+
+            tabBtns.forEach(function (btn) {
+                const isMatch = btn.getAttribute('data-erp-module') === moduleKey;
+                btn.classList.toggle('is-active', isMatch);
+                btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+                btn.setAttribute('tabindex', isMatch ? '0' : '-1');
+            });
+
+            stagePanels.forEach(function (panel) {
+                panel.classList.toggle('is-active', panel.id === targetPanelId);
+            });
+        }
+
+        tabBtns.forEach(function (btn, idx) {
+            btn.addEventListener('click', function () {
+                const mod = btn.getAttribute('data-erp-module');
+                if (mod) switchErpModule(mod);
+            });
+
+            btn.addEventListener('keydown', function (e) {
+                let nextIdx = idx;
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    nextIdx = (idx + 1) % tabBtns.length;
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    nextIdx = (idx - 1 + tabBtns.length) % tabBtns.length;
+                } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    nextIdx = 0;
+                } else if (e.key === 'End') {
+                    e.preventDefault();
+                    nextIdx = tabBtns.length - 1;
+                }
+
+                if (nextIdx !== idx) {
+                    const nextBtn = tabBtns[nextIdx];
+                    const mod = nextBtn.getAttribute('data-erp-module');
+                    if (mod) switchErpModule(mod);
+                    nextBtn.focus();
+                }
+            });
+        });
+    }
+
+    initErpExplorer();
+
 });

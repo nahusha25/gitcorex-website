@@ -488,7 +488,6 @@
                     </div>
                 </article>
             </div>
-            </div>
         </div>
     </section>
 
@@ -658,50 +657,252 @@
                 </p>
             </div>
 
-            <div class="process-grid">
-                <!-- Step 1: Discover -->
-                <div class="process-step-card reveal-on-scroll">
-                    <div class="step-number-pill">01</div>
-                    <h3>Discover</h3>
-                    <p>
-                        We analyze your operational processes, technology requirements, and business goals to define a comprehensive project scope.
-                    </p>
+            <div class="process-interactive-wrap reveal-on-scroll">
+                <!-- Top Milestone Navigation Track -->
+                <div class="blueprint-nav-container">
+                    <div class="blueprint-progress-bar-track" aria-hidden="true">
+                        <div class="blueprint-progress-bar-fill" id="blueprintProgressFill"></div>
+                    </div>
+                    <div class="blueprint-nav-steps" role="tablist" aria-label="Project Delivery Milestones">
+                        <button class="blueprint-nav-step is-active" data-step="0" role="tab" aria-selected="true" aria-controls="blueprint-panel-0" id="blueprint-tab-0">
+                            <div class="blueprint-step-num">01</div>
+                            <div class="blueprint-step-text">
+                                <span class="step-label-name">Discover</span>
+                                <span class="step-label-phase">Scoping</span>
+                            </div>
+                        </button>
+                        <button class="blueprint-nav-step" data-step="1" role="tab" aria-selected="false" aria-controls="blueprint-panel-1" id="blueprint-tab-1">
+                            <div class="blueprint-step-num">02</div>
+                            <div class="blueprint-step-text">
+                                <span class="step-label-name">Design</span>
+                                <span class="step-label-phase">Prototyping</span>
+                            </div>
+                        </button>
+                        <button class="blueprint-nav-step" data-step="2" role="tab" aria-selected="false" aria-controls="blueprint-panel-2" id="blueprint-tab-2">
+                            <div class="blueprint-step-num">03</div>
+                            <div class="blueprint-step-text">
+                                <span class="step-label-name">Build</span>
+                                <span class="step-label-phase">Engineering</span>
+                            </div>
+                        </button>
+                        <button class="blueprint-nav-step" data-step="3" role="tab" aria-selected="false" aria-controls="blueprint-panel-3" id="blueprint-tab-3">
+                            <div class="blueprint-step-num">04</div>
+                            <div class="blueprint-step-text">
+                                <span class="step-label-name">Launch</span>
+                                <span class="step-label-phase">Validation</span>
+                            </div>
+                        </button>
+                        <button class="blueprint-nav-step" data-step="4" role="tab" aria-selected="false" aria-controls="blueprint-panel-4" id="blueprint-tab-4">
+                            <div class="blueprint-step-num">05</div>
+                            <div class="blueprint-step-text">
+                                <span class="step-label-name">Support</span>
+                                <span class="step-label-phase">Operations</span>
+                            </div>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Step 2: Design -->
-                <div class="process-step-card reveal-on-scroll">
-                    <div class="step-number-pill">02</div>
-                    <h3>Design</h3>
-                    <p>
-                        We create wireframes, interactive UI prototypes, and database architectural models configured to match your operating workflows.
-                    </p>
-                </div>
+                <!-- Active Blueprint Display Card -->
+                <div class="blueprint-display-card">
+                    <div class="blueprint-ambient-glow" aria-hidden="true"></div>
+                    <div class="blueprint-content-panel is-active" id="blueprint-panel-0" role="tabpanel" aria-labelledby="blueprint-tab-0">
+                        <div class="blueprint-panel-details">
+                            <div class="blueprint-phase-badge">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span>Phase 01 • Scoping</span>
+                                <span class="blueprint-turnaround-pill">Days 1–3</span>
+                            </div>
+                            <h3 class="blueprint-panel-title">Technical Architecture &amp; Process Discovery</h3>
+                            <p class="blueprint-panel-desc">We analyze your operational processes, technology requirements, and business goals to define a comprehensive project scope, data schema mapping, and delivery timeline.</p>
+                            <div class="blueprint-deliverables-group">
+                                <span class="blueprint-deliverables-title">Key Phase Deliverables:</span>
+                                <ul class="blueprint-deliverables-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>System Architecture Blueprint</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Database Schema &amp; Data Model Matrix</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Milestone-Based Sprint Schedule</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blueprint-panel-visual">
+                            <svg class="blueprint-graphic-svg" viewBox="0 0 300 170" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Architecture discovery diagram">
+                                <rect x="15" y="15" width="270" height="140" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+                                <line x1="15" y1="42" x2="285" y2="42" stroke="rgba(255,255,255,0.1)"/>
+                                <circle cx="32" cy="28" r="3" fill="#FF4B24"/>
+                                <circle cx="44" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <circle cx="56" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <text x="75" y="32" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="10">ARCHITECTURE_DISCOVERY.SPEC</text>
+                                <rect x="35" y="60" width="65" height="30" rx="4" fill="rgba(255,75,36,0.12)" stroke="#FF4B24" stroke-width="1"/>
+                                <text x="43" y="79" fill="#FF4B24" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Client Needs</text>
+                                <rect x="120" y="60" width="65" height="30" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                                <text x="130" y="79" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Schema</text>
+                                <rect x="205" y="60" width="65" height="30" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                                <text x="215" y="79" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Milestones</text>
+                                <line x1="100" y1="75" x2="120" y2="75" stroke="#FF4B24" stroke-width="1.5"/>
+                                <line x1="185" y1="75" x2="205" y2="75" stroke="#10B981" stroke-width="1.5"/>
+                                <rect x="35" y="108" width="235" height="32" rx="4" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+                                <line x1="48" y1="120" x2="140" y2="120" stroke="rgba(255,75,36,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="48" y1="128" x2="220" y2="128" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                <!-- Step 3: Build -->
-                <div class="process-step-card reveal-on-scroll">
-                    <div class="step-number-pill">03</div>
-                    <h3>Build</h3>
-                    <p>
-                        Our engineers build robust, clean-coded software adhering strictly to performance, security, and maintainability standards.
-                    </p>
-                </div>
+                    <div class="blueprint-content-panel" id="blueprint-panel-1" role="tabpanel" aria-labelledby="blueprint-tab-1">
+                        <div class="blueprint-panel-details">
+                            <div class="blueprint-phase-badge">
+                                <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
+                                <span>Phase 02 • Prototyping</span>
+                                <span class="blueprint-turnaround-pill">Days 4–7</span>
+                            </div>
+                            <h3 class="blueprint-panel-title">High-Fidelity Wireframes &amp; Responsive Prototypes</h3>
+                            <p class="blueprint-panel-desc">We create wireframes, interactive UI prototypes, and database architectural models configured to match your operating workflows with mobile-first usability.</p>
+                            <div class="blueprint-deliverables-group">
+                                <span class="blueprint-deliverables-title">Key Phase Deliverables:</span>
+                                <ul class="blueprint-deliverables-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Interactive Clickable Prototype</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Design Tokens &amp; Typography Scale</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Multi-Breakpoint Responsive Shells</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blueprint-panel-visual">
+                            <svg class="blueprint-graphic-svg" viewBox="0 0 300 170" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Wireframe layout prototype">
+                                <rect x="15" y="15" width="270" height="140" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+                                <line x1="15" y1="42" x2="285" y2="42" stroke="rgba(255,255,255,0.1)"/>
+                                <circle cx="32" cy="28" r="3" fill="#FF4B24"/>
+                                <circle cx="44" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <circle cx="56" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <text x="75" y="32" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="10">UI_UX_WIREFRAME_CANVAS</text>
+                                <rect x="35" y="55" width="90" height="50" rx="4" fill="rgba(255,75,36,0.08)" stroke="#FF4B24" stroke-width="1"/>
+                                <line x1="45" y1="70" x2="105" y2="70" stroke="#FF4B24" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="45" y1="80" x2="115" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round"/>
+                                <rect x="45" y="88" width="40" height="10" rx="2" fill="rgba(255,75,36,0.3)"/>
+                                <rect x="145" y="55" width="45" height="85" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+                                <rect x="150" y="65" width="35" height="20" rx="2" fill="rgba(255,75,36,0.15)"/>
+                                <line x1="152" y1="92" x2="180" y2="92" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                                <line x1="152" y1="98" x2="175" y2="98" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                                <rect x="205" y="55" width="65" height="38" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)"/>
+                                <rect x="205" y="102" width="65" height="38" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                <!-- Step 4: Launch -->
-                <div class="process-step-card reveal-on-scroll">
-                    <div class="step-number-pill">04</div>
-                    <h3>Launch</h3>
-                    <p>
-                        Rigorous cross-device testing, security review, and staging validation precede a seamless, structured production rollout.
-                    </p>
-                </div>
+                    <div class="blueprint-content-panel" id="blueprint-panel-2" role="tabpanel" aria-labelledby="blueprint-tab-2">
+                        <div class="blueprint-panel-details">
+                            <div class="blueprint-phase-badge">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <span>Phase 03 • Engineering</span>
+                                <span class="blueprint-turnaround-pill">Sprint 1–3</span>
+                            </div>
+                            <h3 class="blueprint-panel-title">Agile Full-Stack Engineering &amp; Module Assembly</h3>
+                            <p class="blueprint-panel-desc">Our engineers build robust, clean-coded software adhering strictly to performance, security, and maintainability standards with continuous milestone visibility.</p>
+                            <div class="blueprint-deliverables-group">
+                                <span class="blueprint-deliverables-title">Key Phase Deliverables:</span>
+                                <ul class="blueprint-deliverables-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Clean Semantic Code Architecture</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>RESTful API &amp; Database Integration</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Live Staging Sandbox for Client Review</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blueprint-panel-visual">
+                            <svg class="blueprint-graphic-svg" viewBox="0 0 300 170" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Terminal build and test suite">
+                                <rect x="15" y="15" width="270" height="140" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+                                <line x1="15" y1="42" x2="285" y2="42" stroke="rgba(255,255,255,0.1)"/>
+                                <circle cx="32" cy="28" r="3" fill="#FF4B24"/>
+                                <circle cx="44" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <circle cx="56" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <text x="75" y="32" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="10">TERMINAL_BUILD_PIPELINE</text>
+                                <text x="35" y="66" fill="#10B981" font-family="monospace" font-size="11">&gt; git commit -m &quot;feat: core architecture&quot;</text>
+                                <text x="35" y="84" fill="#38BDF8" font-family="monospace" font-size="11">&gt; npm run test:unit --passed</text>
+                                <text x="35" y="102" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="11">&gt; build bundle: 47kb (optimal)</text>
+                                <rect x="35" y="118" width="70" height="22" rx="4" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1"/>
+                                <text x="45" y="133" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="600">PASS 100%</text>
+                                <rect x="115" y="118" width="70" height="22" rx="4" fill="rgba(255,75,36,0.15)" stroke="#FF4B24" stroke-width="1"/>
+                                <text x="127" y="133" fill="#FF4B24" font-family="'Inter', sans-serif" font-size="10" font-weight="600">STAGE V1</text>
+                            </svg>
+                        </div>
+                    </div>
 
-                <!-- Step 5: Support -->
-                <div class="process-step-card reveal-on-scroll">
-                    <div class="step-number-pill">05</div>
-                    <h3>Support</h3>
-                    <p>
-                        Post-deployment technical assistance, proactive performance monitoring, and continuous enhancements to guarantee ongoing uptime.
-                    </p>
+                    <div class="blueprint-content-panel" id="blueprint-panel-3" role="tabpanel" aria-labelledby="blueprint-tab-3">
+                        <div class="blueprint-panel-details">
+                            <div class="blueprint-phase-badge">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                                <span>Phase 04 • Validation</span>
+                                <span class="blueprint-turnaround-pill">Final Sprint</span>
+                            </div>
+                            <h3 class="blueprint-panel-title">Rigorous Cross-Device Testing &amp; Production Rollout</h3>
+                            <p class="blueprint-panel-desc">Rigorous cross-device testing, security review, SSL configuration, and staging validation precede a seamless, structured production rollout with zero downtime.</p>
+                            <div class="blueprint-deliverables-group">
+                                <span class="blueprint-deliverables-title">Key Phase Deliverables:</span>
+                                <ul class="blueprint-deliverables-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Lighthouse 95+ Performance &amp; SEO Audit</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Cross-Browser &amp; 390px Mobile Validation</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Production Deployment &amp; Custom Domain DNS</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blueprint-panel-visual">
+                            <svg class="blueprint-graphic-svg" viewBox="0 0 300 170" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Lighthouse audit scores">
+                                <rect x="15" y="15" width="270" height="140" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+                                <line x1="15" y1="42" x2="285" y2="42" stroke="rgba(255,255,255,0.1)"/>
+                                <circle cx="32" cy="28" r="3" fill="#FF4B24"/>
+                                <circle cx="44" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <circle cx="56" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <text x="75" y="32" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="10">PRODUCTION_ROLLOUT_METRICS</text>
+                                <circle cx="65" cy="80" r="22" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="2"/>
+                                <text x="56" y="84" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="700">98</text>
+                                <text x="44" y="114" fill="rgba(255,255,255,0.7)" font-family="'Inter', sans-serif" font-size="9">Performance</text>
+                                <circle cx="125" cy="80" r="22" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="2"/>
+                                <text x="116" y="84" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="700">95</text>
+                                <text x="100" y="114" fill="rgba(255,255,255,0.7)" font-family="'Inter', sans-serif" font-size="9">Accessibility</text>
+                                <circle cx="185" cy="80" r="22" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="2"/>
+                                <text x="174" y="84" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="700">100</text>
+                                <text x="166" y="114" fill="rgba(255,255,255,0.7)" font-family="'Inter', sans-serif" font-size="9">Best Pract</text>
+                                <circle cx="245" cy="80" r="22" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="2"/>
+                                <text x="234" y="84" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="700">100</text>
+                                <text x="236" y="114" fill="rgba(255,255,255,0.7)" font-family="'Inter', sans-serif" font-size="9">SEO</text>
+                                <rect x="65" y="130" width="170" height="18" rx="4" fill="rgba(255,75,36,0.15)" stroke="#FF4B24" stroke-width="1"/>
+                                <text x="82" y="143" fill="#FFFFFF" font-family="monospace" font-size="10">HTTPS://WWW.GITCOREX.IN</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="blueprint-content-panel" id="blueprint-panel-4" role="tabpanel" aria-labelledby="blueprint-tab-4">
+                        <div class="blueprint-panel-details">
+                            <div class="blueprint-phase-badge">
+                                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                <span>Phase 05 • Operations</span>
+                                <span class="blueprint-turnaround-pill">Ongoing SLA</span>
+                            </div>
+                            <h3 class="blueprint-panel-title">Proactive Technical Monitoring &amp; Continuous Care</h3>
+                            <p class="blueprint-panel-desc">Post-deployment technical assistance, proactive performance monitoring, security patches, and continuous enhancements to guarantee ongoing operational uptime.</p>
+                            <div class="blueprint-deliverables-group">
+                                <span class="blueprint-deliverables-title">Key Phase Deliverables:</span>
+                                <ul class="blueprint-deliverables-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Complete Documentation &amp; Admin Handover</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Automated Backups &amp; Uptime Monitoring</span></li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span>Direct WhatsApp &amp; Email Engineering Support</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blueprint-panel-visual">
+                            <svg class="blueprint-graphic-svg" viewBox="0 0 300 170" width="100%" height="160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="System uptime monitoring telemetry">
+                                <rect x="15" y="15" width="270" height="140" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+                                <line x1="15" y1="42" x2="285" y2="42" stroke="rgba(255,255,255,0.1)"/>
+                                <circle cx="32" cy="28" r="3" fill="#FF4B24"/>
+                                <circle cx="44" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <circle cx="56" cy="28" r="3" fill="rgba(255,255,255,0.25)"/>
+                                <text x="75" y="32" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="10">SYSTEM_UPTIME_CARE</text>
+                                <path d="M35 85 L70 85 L80 65 L90 105 L100 75 L110 95 L120 85 L180 85" stroke="#10B981" stroke-width="2" fill="none"/>
+                                <circle cx="180" cy="85" r="4" fill="#10B981"/>
+                                <rect x="195" y="60" width="75" height="24" rx="4" fill="rgba(16,185,129,0.12)" stroke="#10B981" stroke-width="1"/>
+                                <text x="203" y="76" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="600">99.9% Uptime</text>
+                                <rect x="195" y="92" width="75" height="24" rx="4" fill="rgba(255,75,36,0.12)" stroke="#FF4B24" stroke-width="1"/>
+                                <text x="205" y="108" fill="#FF4B24" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Active Care</text>
+                                <line x1="35" y1="130" x2="265" y2="130" stroke="rgba(255,255,255,0.1)"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1134,7 +1335,138 @@
         </div>
     </section>
 
-    <!-- 7. Frequently Asked Questions (FAQ) -->
+    <!-- 7. Interactive Before vs. After Architecture Comparison -->
+    <section class="section section-white" id="comparison">
+        <div class="container">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="section-eyebrow">Engineering Contrast</span>
+                <h2 class="section-title">Legacy Architecture vs. The gitCoreX Standard</h2>
+                <p class="section-subtitle">
+                    Drag the slider to see how modern engineering eliminates hidden bottlenecks, bloated dependencies, and sluggish load times.
+                </p>
+                <div class="split-preset-controls" role="group" aria-label="Comparison View Presets">
+                    <button type="button" class="split-preset-btn" data-preset="0">View Legacy</button>
+                    <button type="button" class="split-preset-btn is-active" data-preset="50">50/50 Split</button>
+                    <button type="button" class="split-preset-btn" data-preset="100">View gitCoreX</button>
+                </div>
+            </div>
+
+            <div class="comparison-slider-wrapper reveal-on-scroll" id="comparisonSliderWrap" style="--split-pos: 50%;">
+                <!-- Split Stage with Two Visual Panes -->
+                <div class="comparison-stage" aria-hidden="true">
+                    <!-- Layer 1: Left Pane (Legacy Architecture - Red/Amber) -->
+                    <div class="comparison-pane pane-legacy">
+                        <div class="pane-content-card">
+                            <div class="pane-badge-status legacy-badge">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Legacy &amp; Template Stack</span>
+                            </div>
+                            <div class="pane-headline-row">
+                                <h3 class="pane-title">Sluggish, Fragile Architecture</h3>
+                                <span class="pane-score-pill score-bad">42 / 100</span>
+                            </div>
+                            <ul class="pane-points-list">
+                                <li class="point-item point-bad">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div>
+                                        <strong>4.8s Heavy First Contentful Paint</strong>
+                                        <p>Bloated multi-megabyte themes and unoptimized assets stall user onboarding.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-bad">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div>
+                                        <strong>Vulnerable 3rd-Party Plugins</strong>
+                                        <p>Constant update conflicts, plugin breakages, and unpatched security vulnerabilities.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-bad">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div>
+                                        <strong>Disconnected Spreadsheet Silos</strong>
+                                        <p>Manual double-entry between stock, accounting, and sales breeds costly mistakes.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-bad">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div>
+                                        <strong>Clunky Mobile Usability</strong>
+                                        <p>Layouts break on smaller mobile viewports, losing customers on hand-held devices.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="pane-tech-pill-row">
+                                <span class="pane-spec-tag">Bundle: ~2.8 MB</span>
+                                <span class="pane-spec-tag">Plugins: 34+ Third-Party</span>
+                                <span class="pane-spec-tag">Uptime: Inconsistent</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 2: Right Pane (gitCoreX Stack - Clipped with clip-path) -->
+                    <div class="comparison-pane pane-gitcorex">
+                        <div class="pane-content-card">
+                            <div class="pane-badge-status gitcorex-badge">
+                                <i class="fas fa-bolt"></i>
+                                <span>gitCoreX Modern Engineering</span>
+                            </div>
+                            <div class="pane-headline-row">
+                                <h3 class="pane-title">High-Velocity, Engineered Platform</h3>
+                                <span class="pane-score-pill score-good">98 / 100</span>
+                            </div>
+                            <ul class="pane-points-list">
+                                <li class="point-item point-good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong>Sub-Second 0.6s Instant Load</strong>
+                                        <p>Clean semantic code, modern WebP compression, and zero heavy render-blocking assets.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong>Zero-Vulnerability Architecture</strong>
+                                        <p>Pure standards-compliant code with hardened CSP headers and enterprise security.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong>Unified Real-Time Database</strong>
+                                        <p>Single source of truth syncing inventory, GST invoices, and orders simultaneously.</p>
+                                    </div>
+                                </li>
+                                <li class="point-item point-good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong>100% Fluid Mobile Ergonomics</strong>
+                                        <p>Engineered mobile-first down to 390px with zero horizontal scroll and touch navigation.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="pane-tech-pill-row">
+                                <span class="pane-spec-tag gitcorex-spec">Bundle: &lt;48 KB</span>
+                                <span class="pane-spec-tag gitcorex-spec">Lighthouse: 98+</span>
+                                <span class="pane-spec-tag gitcorex-spec">Zero External Dependencies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Draggable Divider Line & Handle -->
+                <div class="comparison-divider-line" aria-hidden="true">
+                    <div class="comparison-handle-grip">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                </div>
+
+                <!-- Accessible Range Input Overlaid Over the Slider -->
+                <input type="range" min="0" max="100" value="50" class="comparison-range-input" id="comparisonRangeInput" aria-label="Drag slider to compare legacy systems with gitCoreX standard" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Frequently Asked Questions (FAQ) -->
     <section class="section section-white" id="faq">
         <div class="container">
             <div class="section-header text-center reveal-on-scroll">

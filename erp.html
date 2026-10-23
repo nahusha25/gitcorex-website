@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="./images/favicon.png">
     
     <!-- Self-hosted Fonts loaded via CSS & Icons -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Core Application Script -->
@@ -68,6 +68,382 @@
                 <p class="page-hero-subtitle">
                     Streamline operations, eliminate departmental bottlenecks, and gain operational visibility with modular ERP systems configured specifically around your workflows.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive ERP Cockpit & Workflow Engine -->
+    <section class="section section-light" id="erp-explorer">
+        <div class="container">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="section-eyebrow">Live Operational Architecture</span>
+                <h2 class="section-title">Interactive ERP Cockpit &amp; Workflow Engine</h2>
+                <p class="section-subtitle">
+                    Select any enterprise module below to explore real-time workflow logic, automation triggers, and connected database pipelines.
+                </p>
+            </div>
+
+            <div class="erp-explorer-wrapper reveal-on-scroll">
+                <!-- Module Segmented Tabs -->
+                <div class="erp-tab-nav" role="tablist" aria-label="ERP Enterprise Modules">
+                    <button type="button" class="erp-tab-btn is-active" data-erp-module="inventory" role="tab" id="erp-tab-inv" aria-controls="erp-panel-inv" aria-selected="true">
+                        <i class="fas fa-warehouse" aria-hidden="true"></i>
+                        <span>Inventory &amp; Warehousing</span>
+                    </button>
+                    <button type="button" class="erp-tab-btn" data-erp-module="accounting" role="tab" id="erp-tab-acc" aria-controls="erp-panel-acc" aria-selected="false">
+                        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                        <span>GST Invoicing &amp; Ledger</span>
+                    </button>
+                    <button type="button" class="erp-tab-btn" data-erp-module="hr" role="tab" id="erp-tab-hr" aria-controls="erp-panel-hr" aria-selected="false">
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                        <span>HR &amp; Biometric Payroll</span>
+                    </button>
+                    <button type="button" class="erp-tab-btn" data-erp-module="sales" role="tab" id="erp-tab-sales" aria-controls="erp-panel-sales" aria-selected="false">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <span>Sales CRM &amp; Dispatch</span>
+                    </button>
+                </div>
+
+                <!-- Cockpit Stage Panels -->
+                <div class="erp-cockpit-stage">
+                    <div class="erp-stage-glow" aria-hidden="true"></div>
+
+                    <!-- Panel 1: Inventory -->
+                    <div class="erp-cockpit-panel is-active" id="erp-panel-inv" role="tabpanel" aria-labelledby="erp-tab-inv">
+                        <div class="erp-panel-grid">
+                            <div class="erp-panel-info">
+                                <div class="erp-panel-badge">
+                                    <i class="fas fa-boxes" aria-hidden="true"></i>
+                                    <span>Real-Time Stock Synchronizer</span>
+                                </div>
+                                <h3 class="erp-panel-heading">Multi-Warehouse Logistics &amp; Stock Intelligence</h3>
+                                <p class="erp-panel-summary">
+                                    Track inventory across multiple physical warehouses with automated reorder triggers, serial and batch number provenance, and live stock valuation based on FIFO / Weighted Average methods.
+                                </p>
+                                <div class="erp-feature-nodes">
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Inter-Branch Stock Transfers</strong>
+                                            <span>Two-step dispatch &amp; receipt verification prevents transit leakages.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-bell" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Automated Min-Level Reorders</strong>
+                                            <span>Triggers instant PO generation when safety thresholds are reached.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-barcode" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Barcode &amp; QR Scanning</strong>
+                                            <span>Seamless scan-to-dispatch workflow on handheld mobile devices.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="erp-telemetry-row">
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">99.8%</span>
+                                        <span class="metric-label">Stock Accuracy</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">&lt;200ms</span>
+                                        <span class="metric-label">Ledger Sync</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">Multi-Unit</span>
+                                        <span class="metric-label">Conversion Rules</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="erp-panel-visual">
+                                <svg class="erp-schematic-svg" viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Inventory workflow schematic">
+                                    <!-- Schematic Canvas -->
+                                    <rect x="10" y="10" width="360" height="260" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+                                    <text x="30" y="38" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="11">INVENTORY_TOPOLOGY // WH-CLUSTER-01</text>
+                                    
+                                    <!-- Nodes -->
+                                    <rect x="30" y="65" width="130" height="50" rx="6" fill="rgba(255,75,36,0.12)" stroke="#FF4B24" stroke-width="1.2"/>
+                                    <text x="42" y="86" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Central Hub (Bengaluru)</text>
+                                    <text x="42" y="102" fill="#FF4B24" font-family="monospace" font-size="10">Units: 14,820</text>
+
+                                    <rect x="220" y="65" width="130" height="50" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="232" y="86" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Regional Depot (North)</text>
+                                    <text x="232" y="102" fill="#10B981" font-family="monospace" font-size="10">Units: 4,190</text>
+
+                                    <!-- Connecting Energy Line -->
+                                    <path d="M160 90 L220 90" stroke="#FF4B24" stroke-width="2" stroke-dasharray="4 3"/>
+
+                                    <!-- Trigger Engine Block -->
+                                    <rect x="30" y="145" width="320" height="48" rx="6" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1"/>
+                                    <circle cx="52" cy="169" r="6" fill="#10B981"/>
+                                    <text x="68" y="166" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Auto-Reorder Daemon: ACTIVE</text>
+                                    <text x="68" y="180" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="9">Evaluates buffer stocks every 60s across all SKUs</text>
+
+                                    <!-- Material Flow Log -->
+                                    <rect x="30" y="210" width="320" height="42" rx="4" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+                                    <text x="42" y="228" fill="#10B981" font-family="monospace" font-size="10">&gt; SKU-8910: Transfer verified (350 pcs)</text>
+                                    <text x="42" y="242" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="10">&gt; Valuation ledger automatically balanced</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Accounting -->
+                    <div class="erp-cockpit-panel" id="erp-panel-acc" role="tabpanel" aria-labelledby="erp-tab-acc">
+                        <div class="erp-panel-grid">
+                            <div class="erp-panel-info">
+                                <div class="erp-panel-badge">
+                                    <i class="fas fa-file-invoice" aria-hidden="true"></i>
+                                    <span>Statutory Compliance Engine</span>
+                                </div>
+                                <h3 class="erp-panel-heading">Automated GST Invoicing &amp; Double-Entry Ledger</h3>
+                                <p class="erp-panel-summary">
+                                    Eliminate tax calculation errors with automatic HSN/SAC determination, split CGST/SGST/IGST logic, e-Invoicing QR codes, and real-time reconciliation with bank feeds.
+                                </p>
+                                <div class="erp-feature-nodes">
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-qrcode" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>IRN &amp; e-Way Bill Ready</strong>
+                                            <span>One-click statutory invoice generation matching GSTN format.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Automated Double-Entry Ledger</strong>
+                                            <span>Every sales or purchase invoice posts balanced journal vouchers instantly.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-university" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Live Bank Statement Reconciler</strong>
+                                            <span>Matches bank statements against receivables to clear dues automatically.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="erp-telemetry-row">
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">100%</span>
+                                        <span class="metric-label">GSTN Compliant</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">0</span>
+                                        <span class="metric-label">Discrepancies</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">Instant</span>
+                                        <span class="metric-label">P&amp;L Statements</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="erp-panel-visual">
+                                <svg class="erp-schematic-svg" viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GST Invoicing and double entry schematic">
+                                    <rect x="10" y="10" width="360" height="260" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+                                    <text x="30" y="38" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="11">FINANCIAL_LEDGER_ENGINE // GSTIN-ACTIVE</text>
+                                    
+                                    <!-- Invoice Card -->
+                                    <rect x="30" y="60" width="140" height="75" rx="6" fill="rgba(255,75,36,0.1)" stroke="#FF4B24" stroke-width="1.2"/>
+                                    <text x="42" y="82" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Tax Invoice #INV-2601</text>
+                                    <text x="42" y="100" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="10">Subtotal: &#8377;1,25,000</text>
+                                    <text x="42" y="118" fill="#10B981" font-family="monospace" font-size="10">GST (18%): &#8377;22,500</text>
+
+                                    <!-- Journal Voucher Card -->
+                                    <rect x="210" y="60" width="140" height="75" rx="6" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1.2"/>
+                                    <text x="222" y="82" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">General Ledger JV</text>
+                                    <text x="222" y="100" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="10">Dr. Customer A/c</text>
+                                    <text x="222" y="118" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="10">Cr. Sales Revenue</text>
+
+                                    <path d="M170 98 L210 98" stroke="#10B981" stroke-width="2" stroke-dasharray="4 2"/>
+
+                                    <!-- Tax split matrix -->
+                                    <rect x="30" y="150" width="320" height="42" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+                                    <text x="42" y="176" fill="#38BDF8" font-family="monospace" font-size="10">CGST (9%): &#8377;11,250 | SGST (9%): &#8377;11,250 | IRN: HASH_OK</text>
+
+                                    <!-- Reconciliation line -->
+                                    <rect x="30" y="205" width="320" height="48" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+                                    <circle cx="50" cy="229" r="6" fill="#38BDF8"/>
+                                    <text x="66" y="226" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Payment Gateway Reconciliation: AUTO-SYNC</text>
+                                    <text x="66" y="240" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="9">Direct API hook confirms transaction clearance</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: HR & Payroll -->
+                    <div class="erp-cockpit-panel" id="erp-panel-hr" role="tabpanel" aria-labelledby="erp-tab-hr">
+                        <div class="erp-panel-grid">
+                            <div class="erp-panel-info">
+                                <div class="erp-panel-badge">
+                                    <i class="fas fa-users-cog" aria-hidden="true"></i>
+                                    <span>Human Capital Engine</span>
+                                </div>
+                                <h3 class="erp-panel-heading">Biometric Attendance, Leaves &amp; One-Click Payroll</h3>
+                                <p class="erp-panel-summary">
+                                    Automate your entire workforce administration from biometric punch logging and leave workflows to statutory salary deductions (PF, ESI, Professional Tax) and instant payslip disbursement.
+                                </p>
+                                <div class="erp-feature-nodes">
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-fingerprint" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Hardware Device Integration</strong>
+                                            <span>Seamless sync with biometric fingerprint, RFID, and facial terminals.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-calculator" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Automated Formula Deduction</strong>
+                                            <span>Calculates overtime, allowances, LOP, PF, and TDS transparently.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Encrypted Pay Slips via Email &amp; SMS</strong>
+                                            <span>Distributes password-protected PDF salary slips with one action.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="erp-telemetry-row">
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">100%</span>
+                                        <span class="metric-label">PF / ESI Compliance</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">1-Click</span>
+                                        <span class="metric-label">Disbursement</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">Self-Service</span>
+                                        <span class="metric-label">Employee Portal</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="erp-panel-visual">
+                                <svg class="erp-schematic-svg" viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HR and Biometric Payroll flow schematic">
+                                    <rect x="10" y="10" width="360" height="260" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+                                    <text x="30" y="38" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="11">HR_PAYROLL_AUTOMATION // PAY-PERIOD-2026</text>
+                                    
+                                    <!-- Biometric Terminal -->
+                                    <rect x="30" y="60" width="130" height="60" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                    <text x="42" y="84" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Biometric Terminal</text>
+                                    <text x="42" y="102" fill="#10B981" font-family="monospace" font-size="10">98.4% Present Today</text>
+
+                                    <!-- Payroll Calculation Core -->
+                                    <rect x="220" y="60" width="130" height="60" rx="6" fill="rgba(255,75,36,0.12)" stroke="#FF4B24" stroke-width="1.2"/>
+                                    <text x="232" y="84" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Payroll Engine</text>
+                                    <text x="232" y="102" fill="#FF4B24" font-family="monospace" font-size="10">Ready for Payout</text>
+
+                                    <path d="M160 90 L220 90" stroke="#FF4B24" stroke-width="2" stroke-dasharray="4 2"/>
+
+                                    <!-- Salary structure strip -->
+                                    <rect x="30" y="135" width="320" height="50" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+                                    <text x="42" y="156" fill="#38BDF8" font-family="monospace" font-size="10">BASIC (50%) + HRA (30%) + SPECIAL ALLOWANCE (20%)</text>
+                                    <text x="42" y="172" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="10">Deductions: EPF 12% + ESIC 0.75% + Professional Tax</text>
+
+                                    <!-- Bank Disbursement API -->
+                                    <rect x="30" y="200" width="320" height="50" rx="6" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1"/>
+                                    <circle cx="50" cy="225" r="6" fill="#10B981"/>
+                                    <text x="66" y="222" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Corporate Bank NEFT/RTGS Batch: READY</text>
+                                    <text x="66" y="238" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="9">Generates secure encrypted NACH payment files directly</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Sales CRM & Dispatch -->
+                    <div class="erp-cockpit-panel" id="erp-panel-sales" role="tabpanel" aria-labelledby="erp-tab-sales">
+                        <div class="erp-panel-grid">
+                            <div class="erp-panel-info">
+                                <div class="erp-panel-badge">
+                                    <i class="fas fa-funnel-dollar" aria-hidden="true"></i>
+                                    <span>Revenue Operations</span>
+                                </div>
+                                <h3 class="erp-panel-heading">Lead Pipeline, Quotations &amp; Delivery Tracking</h3>
+                                <p class="erp-panel-summary">
+                                    Empower sales representatives with rapid quotation generation, multi-tier discount approval matrices, and synchronized order handover directly to warehousing and dispatch teams.
+                                </p>
+                                <div class="erp-feature-nodes">
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-file-contract" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Fast Estimation &amp; Quotations</strong>
+                                            <span>Convert client inquiries to professional PDF proposals in seconds.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-check-double" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Approval Hierarchies</strong>
+                                            <span>Custom margin and credit limit approvals routed to managers via email.</span>
+                                        </div>
+                                    </div>
+                                    <div class="erp-node-card">
+                                        <i class="fas fa-truck-moving" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Dispatch &amp; Milestone Tracking</strong>
+                                            <span>Automated courier tracking numbers and customer delivery notices.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="erp-telemetry-row">
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">3x</span>
+                                        <span class="metric-label">Quotation Speed</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">Real-Time</span>
+                                        <span class="metric-label">Pipeline Visibility</span>
+                                    </div>
+                                    <div class="erp-metric-badge">
+                                        <span class="metric-val">Zero</span>
+                                        <span class="metric-label">Order Drops</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="erp-panel-visual">
+                                <svg class="erp-schematic-svg" viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sales and dispatch pipeline schematic">
+                                    <rect x="10" y="10" width="360" height="260" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+                                    <text x="30" y="38" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="11">SALES_CRM_FUNNEL // PIPELINE_ACTIVE</text>
+                                    
+                                    <!-- Pipeline Stage 1 -->
+                                    <rect x="30" y="60" width="90" height="60" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)"/>
+                                    <text x="42" y="82" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">1. Inquiry</text>
+                                    <text x="42" y="98" fill="#FF4B24" font-family="monospace" font-size="10">18 Active</text>
+
+                                    <!-- Pipeline Stage 2 -->
+                                    <rect x="145" y="60" width="90" height="60" rx="6" fill="rgba(255,75,36,0.12)" stroke="#FF4B24"/>
+                                    <text x="157" y="82" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">2. Quote Sent</text>
+                                    <text x="157" y="98" fill="#10B981" font-family="monospace" font-size="10">&#8377;8.4 Lakhs</text>
+
+                                    <!-- Pipeline Stage 3 -->
+                                    <rect x="260" y="60" width="90" height="60" rx="6" fill="rgba(16,185,129,0.1)" stroke="#10B981"/>
+                                    <text x="272" y="82" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">3. Won &amp; PO</text>
+                                    <text x="272" y="98" fill="#10B981" font-family="monospace" font-size="10">Dispatched</text>
+
+                                    <path d="M120 90 L145 90" stroke="#FF4B24" stroke-width="2"/>
+                                    <path d="M235 90 L260 90" stroke="#10B981" stroke-width="2"/>
+
+                                    <!-- Order Conversion Telemetry -->
+                                    <rect x="30" y="135" width="320" height="48" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+                                    <text x="42" y="156" fill="#38BDF8" font-family="monospace" font-size="10">&gt; Automated Sales Order generated upon quote approval</text>
+                                    <text x="42" y="172" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="9">&gt; Warehouse reserve hold allocated in realtime</text>
+
+                                    <!-- Logistics Dispatch Tracker -->
+                                    <rect x="30" y="198" width="320" height="52" rx="6" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1"/>
+                                    <circle cx="50" cy="224" r="6" fill="#10B981"/>
+                                    <text x="66" y="221" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Dispatch Gate Sync: DOCK-02</text>
+                                    <text x="66" y="237" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="9">e-Way bill attached &bull; Waybill #KA-9821-2026</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -3317,3 +3317,773 @@ textarea.form-control {
         transform: translateY(0);
     }
 }
+
+/* ============================================================
+   FEATURE 1: INTERACTIVE 5-STEP DELIVERY BLUEPRINT
+   ============================================================ */
+.process-interactive-wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blueprint-nav-container {
+    position: relative;
+    margin-bottom: 3.2rem;
+    padding: 0 1.2rem;
+}
+
+.blueprint-progress-bar-track {
+    position: absolute;
+    top: 22px;
+    left: 7%;
+    right: 7%;
+    height: 3px;
+    background: #E5E7EB;
+    z-index: 1;
+    border-radius: 999px;
+}
+
+.blueprint-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-orange) 0%, #FF7849 100%);
+    width: 0%;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 999px;
+    box-shadow: 0 0 12px rgba(255, 75, 36, 0.45);
+}
+
+.blueprint-nav-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.blueprint-nav-step {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.blueprint-step-num {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--brand-white);
+    border: 2px solid #E5E7EB;
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 1.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.blueprint-nav-step:hover .blueprint-step-num {
+    border-color: var(--brand-orange);
+    color: var(--brand-orange);
+    transform: translateY(-2px);
+}
+
+.blueprint-nav-step.is-active .blueprint-step-num {
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    color: var(--brand-white);
+    box-shadow: 0 4px 16px rgba(255, 75, 36, 0.42);
+    transform: scale(1.08);
+}
+
+.blueprint-step-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-label-name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--brand-charcoal);
+    transition: color 0.2s ease;
+}
+
+.step-label-phase {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.blueprint-nav-step.is-active .step-label-name {
+    color: var(--brand-orange);
+}
+
+.blueprint-display-card {
+    background: linear-gradient(145deg, #1B1C20 0%, #26282E 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 3.6rem 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.35);
+}
+
+.blueprint-ambient-glow {
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(255, 75, 36, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(35px);
+}
+
+.blueprint-content-panel {
+    display: none;
+    grid-template-columns: 1.2fr 0.95fr;
+    gap: 3.6rem;
+    align-items: center;
+}
+
+.blueprint-content-panel.is-active {
+    display: grid;
+    animation: panelFadeSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.blueprint-phase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--brand-orange);
+    margin-bottom: 1.4rem;
+}
+
+.blueprint-turnaround-pill {
+    background: rgba(255, 75, 36, 0.16);
+    border: 1px solid rgba(255, 75, 36, 0.32);
+    padding: 0.2rem 0.85rem;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    color: #FF8A6B;
+}
+
+.blueprint-panel-title {
+    color: #FFFFFF;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 1.4rem;
+}
+
+.blueprint-panel-desc {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.55rem;
+    line-height: 1.65;
+    margin-bottom: 2.2rem;
+}
+
+.blueprint-deliverables-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.blueprint-deliverables-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.blueprint-deliverables-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.blueprint-deliverables-list li i {
+    color: #10B981;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.blueprint-panel-visual {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blueprint-graphic-svg {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+}
+
+/* ============================================================
+   FEATURE 2: INTERACTIVE BEFORE VS. AFTER COMPARISON SLIDER
+   ============================================================ */
+.split-preset-controls {
+    display: inline-flex;
+    gap: 0.6rem;
+    background: #F3F4F6;
+    padding: 0.4rem;
+    border-radius: 999px;
+    margin-top: 1.8rem;
+    border: 1px solid #E5E7EB;
+}
+
+.split-preset-btn {
+    background: transparent;
+    border: none;
+    padding: 0.65rem 1.6rem;
+    border-radius: 999px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.split-preset-btn:hover {
+    color: var(--brand-charcoal);
+}
+
+.split-preset-btn.is-active {
+    background: var(--brand-white);
+    color: var(--brand-charcoal);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-slider-wrapper {
+    position: relative;
+    max-width: 1060px;
+    margin: 3.2rem auto 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #E5E7EB;
+    user-select: none;
+}
+
+.comparison-stage {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    background: #18191D;
+}
+
+.comparison-pane {
+    position: absolute;
+    inset: 0;
+    padding: 3.6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pane-legacy {
+    background: linear-gradient(135deg, #1C1D21 0%, #2A2121 100%);
+    color: #F3F4F6;
+    z-index: 1;
+}
+
+.pane-gitcorex {
+    background: linear-gradient(135deg, #14171E 0%, #1A242B 100%);
+    color: #FFFFFF;
+    z-index: 2;
+    clip-path: polygon(var(--split-pos, 50%) 0, 100% 0, 100% 100%, var(--split-pos, 50%) 100%);
+}
+
+.pane-badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 1.6rem;
+    width: fit-content;
+}
+
+.legacy-badge {
+    background: rgba(239, 68, 68, 0.16);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.32);
+}
+
+.gitcorex-badge {
+    background: rgba(255, 75, 36, 0.16);
+    color: #FF7849;
+    border: 1px solid rgba(255, 75, 36, 0.35);
+}
+
+.pane-headline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.pane-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.pane-score-pill {
+    font-size: 1.35rem;
+    font-weight: 800;
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.score-bad {
+    background: rgba(239, 68, 68, 0.2);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.score-good {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34D399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.pane-points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem 2.4rem;
+}
+
+.point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.point-item i {
+    font-size: 1.6rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.point-bad i {
+    color: #EF4444;
+}
+
+.point-good i {
+    color: #10B981;
+}
+
+.point-item strong {
+    display: block;
+    font-size: 1.45rem;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+}
+
+.point-item p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.pane-tech-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.pane-spec-tag {
+    font-size: 1.2rem;
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.35rem 0.95rem;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.pane-spec-tag.gitcorex-spec {
+    background: rgba(255, 75, 36, 0.12);
+    border-color: rgba(255, 75, 36, 0.3);
+    color: #FF8A6B;
+}
+
+.comparison-divider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--split-pos, 50%);
+    width: 3px;
+    background: #FFFFFF;
+    z-index: 10;
+    transform: translateX(-50%);
+    pointer-events: none;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.comparison-handle-grip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--brand-white);
+    color: var(--brand-charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--brand-orange);
+}
+
+.comparison-range-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 20;
+    margin: 0;
+}
+
+/* ============================================================
+   FEATURE 3: INTERACTIVE ERP COCKPIT & WORKFLOW EXPLORER
+   ============================================================ */
+.erp-explorer-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.erp-tab-nav {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.erp-tab-btn {
+    background: var(--brand-white);
+    border: 1px solid var(--border-color);
+    padding: 1.2rem 2rem;
+    border-radius: 999px;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--brand-charcoal);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.erp-tab-btn:hover {
+    border-color: var(--brand-orange);
+    color: var(--brand-orange);
+}
+
+.erp-tab-btn.is-active {
+    background: var(--brand-orange);
+    color: var(--brand-white);
+    border-color: var(--brand-orange);
+    box-shadow: 0 4px 16px rgba(255, 75, 36, 0.38);
+}
+
+.erp-cockpit-stage {
+    background: linear-gradient(145deg, #18191C 0%, #23252A 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 3.6rem 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.35);
+}
+
+.erp-stage-glow {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 75, 36, 0.14) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(35px);
+}
+
+.erp-cockpit-panel {
+    display: none;
+}
+
+.erp-cockpit-panel.is-active {
+    display: block;
+    animation: panelFadeSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.erp-panel-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 3.6rem;
+    align-items: center;
+}
+
+.erp-panel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brand-orange);
+    margin-bottom: 1.2rem;
+}
+
+.erp-panel-heading {
+    color: #FFFFFF;
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+}
+
+.erp-panel-summary {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+}
+
+.erp-feature-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 2.4rem;
+}
+
+.erp-node-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.2rem 1.6rem;
+    border-radius: var(--radius-sm);
+}
+
+.erp-node-card i {
+    color: #FF4B24;
+    font-size: 1.6rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.erp-node-card strong {
+    display: block;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 0.2rem;
+}
+
+.erp-node-card span {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.45;
+}
+
+.erp-telemetry-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.erp-metric-badge {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.erp-metric-badge .metric-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #10B981;
+    font-family: 'Inter', sans-serif;
+}
+
+.erp-metric-badge .metric-label {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.erp-panel-visual {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erp-schematic-svg {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    display: block;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES FOR NEW FEATURES
+   ============================================================ */
+@media (max-width: 900px) {
+    .blueprint-content-panel {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+
+    .erp-panel-grid {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+    }
+
+    .comparison-pane {
+        padding: 3rem 2.8rem;
+    }
+
+    .blueprint-display-card,
+    .erp-cockpit-stage {
+        padding: 2.8rem 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pane-points-list {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+
+    .step-label-phase {
+        display: none;
+    }
+
+    .blueprint-step-num {
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+
+    .step-label-name {
+        font-size: 1.25rem;
+    }
+
+    .blueprint-nav-container {
+        padding: 0 0.4rem;
+    }
+
+    .blueprint-progress-bar-track {
+        top: 18px;
+        left: 4%;
+        right: 4%;
+    }
+
+    .comparison-stage {
+        min-height: 540px;
+    }
+
+    .pane-title {
+        font-size: 1.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blueprint-display-card,
+    .erp-cockpit-stage,
+    .comparison-pane {
+        padding: 2.2rem 1.6rem;
+    }
+
+    .blueprint-panel-title,
+    .erp-panel-heading {
+        font-size: 1.9rem;
+    }
+
+    .erp-tab-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.6rem;
+        font-size: 1.35rem;
+    }
+
+    .split-preset-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .split-preset-btn {
+        padding: 0.6rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .comparison-stage {
+        min-height: 590px;
+    }
+}
+
+/* ============================================================
+   PREFERS-REDUCED-MOTION ACCESSIBILITY OVERRIDES
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .blueprint-progress-bar-fill,
+    .blueprint-content-panel.is-active,
+    .erp-cockpit-panel.is-active {
+        animation: none !important;
+        transition: none !important;
+    }
+}
