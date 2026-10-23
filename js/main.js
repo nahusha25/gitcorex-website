@@ -576,4 +576,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     init3DCardTilt();
 
+    // 10. Expanding Offerings Panels (Touch & Keyboard Active State)
+    function initExpandingPanels() {
+        const panels = document.querySelectorAll('.expanding-panel');
+        if (!panels.length) return;
+
+        panels.forEach(function (panel) {
+            panel.addEventListener('click', function (e) {
+                // If user clicked inside an anchor tag, allow normal link navigation
+                if (e.target.closest('a')) return;
+                panels.forEach(function (p) {
+                    p.classList.remove('is-active');
+                });
+                panel.classList.add('is-active');
+            });
+
+            panel.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    if (e.target === panel) {
+                        e.preventDefault();
+                        panels.forEach(function (p) {
+                            p.classList.remove('is-active');
+                        });
+                        panel.classList.add('is-active');
+                    }
+                }
+            });
+        });
+    }
+
+    initExpandingPanels();
+
 });

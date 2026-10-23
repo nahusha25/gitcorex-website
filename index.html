@@ -255,69 +255,239 @@
                 </p>
             </div>
 
-            <div class="services-summary-grid">
-                <!-- Card 1: Websites -->
-                <div class="service-summary-card reveal-on-scroll">
-                    <div class="service-card-icon-wrap">
-                        <i class="fas fa-laptop-code"></i>
+            <div class="expanding-panels-container reveal-on-scroll">
+                <!-- Panel 1: Websites -->
+                <article class="expanding-panel is-active" tabindex="0" role="region" aria-label="Web Development: Websites that stand out.">
+                    <div class="panel-ambient-glow" aria-hidden="true"></div>
+                    <div class="panel-illustration-wrap" aria-hidden="true">
+                        <!-- Inline SVG 1: Browser wireframe -->
+                        <svg class="panel-svg" viewBox="0 0 340 180" width="340" height="180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                            <!-- Browser Window Outer Shell -->
+                            <rect x="8" y="10" width="324" height="160" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.2" />
+                            <line x1="8" y1="36" x2="332" y2="36" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2" />
+                            <!-- Window Controls -->
+                            <circle cx="24" cy="23" r="3.5" fill="#FF4B24" fill-opacity="0.85" />
+                            <circle cx="36" cy="23" r="3.5" fill="rgba(255, 255, 255, 0.25)" />
+                            <circle cx="48" cy="23" r="3.5" fill="rgba(255, 255, 255, 0.25)" />
+                            <!-- Address Bar Wireframe -->
+                            <rect x="66" y="17" width="150" height="12" rx="4" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 75, 36, 0.4)" stroke-width="1" />
+                            <line x1="76" y1="23" x2="135" y2="23" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1" stroke-linecap="round" />
+                            <!-- Wireframe Grid Lines -->
+                            <line x1="8" y1="80" x2="332" y2="80" stroke="rgba(255, 255, 255, 0.04)" stroke-dasharray="3 3" />
+                            <line x1="8" y1="124" x2="332" y2="124" stroke="rgba(255, 255, 255, 0.04)" stroke-dasharray="3 3" />
+                            <line x1="160" y1="36" x2="160" y2="170" stroke="rgba(255, 255, 255, 0.04)" stroke-dasharray="3 3" />
+                            <!-- Left Hero Content Lines -->
+                            <rect x="24" y="50" width="100" height="7" rx="3" fill="#FF4B24" fill-opacity="0.9" />
+                            <rect x="24" y="64" width="118" height="5" rx="2" fill="rgba(255, 255, 255, 0.22)" />
+                            <rect x="24" y="74" width="95" height="5" rx="2" fill="rgba(255, 255, 255, 0.15)" />
+                            <rect x="24" y="90" width="54" height="15" rx="4" fill="rgba(255, 75, 36, 0.25)" stroke="#FF4B24" stroke-width="1" />
+                            <!-- Right Mockup / Card Stack -->
+                            <rect x="176" y="48" width="144" height="72" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1" />
+                            <rect x="186" y="58" width="124" height="34" rx="4" fill="rgba(255, 75, 36, 0.08)" stroke="rgba(255, 75, 36, 0.3)" stroke-dasharray="2 2" />
+                            <line x1="186" y1="102" x2="245" y2="102" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="186" y1="109" x2="275" y2="109" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-linecap="round" />
+                            <!-- Bottom 3 Wireframe Cards -->
+                            <rect x="24" y="126" width="88" height="32" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+                            <line x1="34" y1="138" x2="68" y2="138" stroke="#FF4B24" stroke-width="1.2" stroke-linecap="round" />
+                            <line x1="34" y1="146" x2="88" y2="146" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1" stroke-linecap="round" />
+                            <rect x="126" y="126" width="88" height="32" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+                            <line x1="136" y1="138" x2="170" y2="138" stroke="#FF4B24" stroke-width="1.2" stroke-linecap="round" />
+                            <line x1="136" y1="146" x2="190" y2="146" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1" stroke-linecap="round" />
+                            <rect x="228" y="126" width="88" height="32" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+                            <line x1="238" y1="138" x2="272" y2="138" stroke="#FF4B24" stroke-width="1.2" stroke-linecap="round" />
+                            <line x1="238" y1="146" x2="292" y2="146" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <h3>Modern Website Development</h3>
-                    <p>
-                        High-impact corporate websites, scalable e-commerce storefronts, and bespoke web platforms engineered for brand distinction, fast performance, and lead conversion.
-                    </p>
-                    <ul class="service-feature-checklist">
-                        <li><i class="fas fa-check"></i> Corporate &amp; Business Websites</li>
-                        <li><i class="fas fa-check"></i> E-Commerce &amp; Payment Integration</li>
-                        <li><i class="fas fa-check"></i> High-Conversion Landing Pages</li>
-                        <li><i class="fas fa-check"></i> Responsive Redesigns &amp; Maintenance</li>
-                    </ul>
-                    <a href="services.html" class="card-cta-link">
-                        <span>Explore Website Development</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                    
+                    <div class="panel-top-bar">
+                        <div class="panel-icon-badge" aria-hidden="true">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <span class="panel-eyebrow-tag">Web Development</span>
+                    </div>
 
-                <!-- Card 2: ERP Solutions -->
-                <div class="service-summary-card reveal-on-scroll">
-                    <div class="service-card-icon-wrap">
-                        <i class="fas fa-cogs"></i>
+                    <div class="panel-body">
+                        <h3 class="panel-headline">Websites that stand out.</h3>
+                        
+                        <div class="panel-expanded-content">
+                            <p class="panel-description">
+                                High-impact corporate websites, scalable e-commerce storefronts, and bespoke web platforms engineered for brand distinction, fast performance, and lead conversion.
+                            </p>
+                            <ul class="panel-feature-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Corporate &amp; Business Websites</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>E-Commerce &amp; Payment Integration</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>High-Conversion Landing Pages</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Responsive Redesigns &amp; Maintenance</span></li>
+                            </ul>
+                            <div class="panel-cta-wrap">
+                                <a href="services.html" class="panel-cta-link">
+                                    <span>Explore Website Development</span>
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Enterprise ERP Solutions</h3>
-                    <p>
-                        Centralized business management software designed around your specific operating workflows—bringing clarity to inventory, sales pipelines, accounting, and human capital.
-                    </p>
-                    <ul class="service-feature-checklist">
-                        <li><i class="fas fa-check"></i> Inventory &amp; Multi-Stock Tracking</li>
-                        <li><i class="fas fa-check"></i> Sales, Purchases &amp; Invoicing</li>
-                        <li><i class="fas fa-check"></i> HR, Attendance &amp; Payroll Management</li>
-                        <li><i class="fas fa-check"></i> Custom Workflow Automation</li>
-                    </ul>
-                    <a href="erp.html" class="card-cta-link">
-                        <span>Explore ERP Solutions</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                </article>
 
-                <!-- Card 3: Digital Solutions -->
-                <div class="service-summary-card reveal-on-scroll">
-                    <div class="service-card-icon-wrap">
-                        <i class="fas fa-sliders-h"></i>
+                <!-- Panel 2: ERP Solutions -->
+                <article class="expanding-panel" tabindex="0" role="region" aria-label="Enterprise ERP Solutions: ERP that runs your business.">
+                    <div class="panel-ambient-glow" aria-hidden="true"></div>
+                    <div class="panel-illustration-wrap" aria-hidden="true">
+                        <!-- Inline SVG 2: Connected modules -->
+                        <svg class="panel-svg" viewBox="0 0 340 180" width="340" height="180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                            <!-- Connecting Circuits / Bus Lines -->
+                            <path d="M102 46 L140 46 L158 74" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1.4" stroke-dasharray="3 3" />
+                            <path d="M238 46 L200 46 L182 74" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1.4" stroke-dasharray="3 3" />
+                            <path d="M102 134 L140 134 L158 106" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1.4" stroke-dasharray="3 3" />
+                            <path d="M238 134 L200 134 L182 106" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1.4" stroke-dasharray="3 3" />
+                            <line x1="170" y1="40" x2="170" y2="65" stroke="rgba(255, 75, 36, 0.5)" stroke-width="1.5" />
+                            <line x1="170" y1="115" x2="170" y2="140" stroke="rgba(255, 75, 36, 0.5)" stroke-width="1.5" />
+                            <!-- Pulse Signal Points -->
+                            <circle cx="140" cy="46" r="3" fill="#FF4B24" />
+                            <circle cx="200" cy="46" r="3" fill="#FF4B24" />
+                            <circle cx="140" cy="134" r="3" fill="#FF4B24" />
+                            <circle cx="200" cy="134" r="3" fill="#FF4B24" />
+                            <!-- Central Core Hub -->
+                            <circle cx="170" cy="90" r="28" fill="rgba(255, 75, 36, 0.12)" stroke="#FF4B24" stroke-width="1.8" />
+                            <circle cx="170" cy="90" r="16" fill="rgba(255, 75, 36, 0.22)" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.2" />
+                            <circle cx="170" cy="90" r="6" fill="#FF4B24" />
+                            <!-- Concentric Orbit Ring -->
+                            <circle cx="170" cy="90" r="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" stroke-dasharray="4 4" />
+                            <!-- Module 1: Inventory (Top Left) -->
+                            <rect x="22" y="25" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.2" />
+                            <line x1="34" y1="40" x2="64" y2="40" stroke="#FF4B24" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="34" y1="48" x2="88" y2="48" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1" stroke-linecap="round" />
+                            <line x1="34" y1="54" x2="72" y2="54" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1" stroke-linecap="round" />
+                            <!-- Module 2: Finance / Accounts (Top Right) -->
+                            <rect x="238" y="25" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.2" />
+                            <line x1="250" y1="40" x2="280" y2="40" stroke="#FF4B24" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="250" y1="48" x2="304" y2="48" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1" stroke-linecap="round" />
+                            <line x1="250" y1="54" x2="288" y2="54" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1" stroke-linecap="round" />
+                            <!-- Module 3: HR & Payroll (Bottom Left) -->
+                            <rect x="22" y="113" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.2" />
+                            <line x1="34" y1="128" x2="64" y2="128" stroke="#FF4B24" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="34" y1="136" x2="88" y2="136" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1" stroke-linecap="round" />
+                            <line x1="34" y1="142" x2="72" y2="142" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1" stroke-linecap="round" />
+                            <!-- Module 4: Sales & Automation (Bottom Right) -->
+                            <rect x="238" y="113" width="80" height="42" rx="6" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.2" />
+                            <line x1="250" y1="128" x2="280" y2="128" stroke="#FF4B24" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="250" y1="136" x2="304" y2="136" stroke="rgba(255, 255, 255, 0.22)" stroke-width="1" stroke-linecap="round" />
+                            <line x1="250" y1="142" x2="288" y2="142" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <h3>Digital Solutions &amp; Engineering</h3>
-                    <p>
-                        Specialized digital utilities, API integrations, database optimization, and user experience design to modernize legacy workflows and increase organizational agility.
-                    </p>
-                    <ul class="service-feature-checklist">
-                        <li><i class="fas fa-check"></i> UI/UX Design &amp; Prototyping</li>
-                        <li><i class="fas fa-check"></i> Custom Web Applications &amp; Portals</li>
-                        <li><i class="fas fa-check"></i> Database Architecture &amp; Tuning</li>
-                        <li><i class="fas fa-check"></i> Software &amp; Cloud Integrations</li>
-                    </ul>
-                    <a href="services.html#digital-solutions" class="card-cta-link">
-                        <span>Explore Digital Solutions</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+
+                    <div class="panel-top-bar">
+                        <div class="panel-icon-badge" aria-hidden="true">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <span class="panel-eyebrow-tag">Enterprise ERP</span>
+                    </div>
+
+                    <div class="panel-body">
+                        <h3 class="panel-headline">ERP that runs your business.</h3>
+                        
+                        <div class="panel-expanded-content">
+                            <p class="panel-description">
+                                Centralized business management software designed around your specific operating workflows—bringing clarity to inventory, sales pipelines, accounting, and human capital.
+                            </p>
+                            <ul class="panel-feature-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Inventory &amp; Multi-Stock Tracking</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Sales, Purchases &amp; Invoicing</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>HR, Attendance &amp; Payroll Management</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Custom Workflow Automation</span></li>
+                            </ul>
+                            <div class="panel-cta-wrap">
+                                <a href="erp.html" class="panel-cta-link">
+                                    <span>Explore ERP Solutions</span>
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Panel 3: Digital Solutions -->
+                <article class="expanding-panel" tabindex="0" role="region" aria-label="Digital Solutions & Engineering: Digital tools that connect everything.">
+                    <div class="panel-ambient-glow" aria-hidden="true"></div>
+                    <div class="panel-illustration-wrap" aria-hidden="true">
+                        <!-- Inline SVG 3: API nodes and code lines -->
+                        <svg class="panel-svg" viewBox="0 0 340 180" width="340" height="180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                            <!-- Left API Endpoints -->
+                            <rect x="20" y="24" width="70" height="24" rx="4" fill="rgba(255, 75, 36, 0.12)" stroke="#FF4B24" stroke-width="1.2" />
+                            <text x="28" y="40" fill="#FF4B24" font-family="'Courier New', monospace" font-size="10" font-weight="bold">POST</text>
+                            <line x1="60" y1="36" x2="80" y2="36" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" />
+
+                            <rect x="20" y="60" width="70" height="24" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                            <text x="28" y="76" fill="#10B981" font-family="'Courier New', monospace" font-size="10" font-weight="bold">GET</text>
+                            <line x1="56" y1="72" x2="80" y2="72" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" />
+
+                            <rect x="20" y="96" width="70" height="24" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                            <text x="28" y="112" fill="#38BDF8" font-family="'Courier New', monospace" font-size="10" font-weight="bold">SYNC</text>
+                            <line x1="60" y1="108" x2="80" y2="108" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" />
+
+                            <rect x="20" y="132" width="70" height="24" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" />
+                            <text x="28" y="148" fill="#F59E0B" font-family="'Courier New', monospace" font-size="10" font-weight="bold">AUTH</text>
+                            <line x1="60" y1="144" x2="80" y2="144" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" />
+
+                            <!-- Curved Pipeline Paths -->
+                            <path d="M90 36 C125 36, 135 72, 165 72" stroke="#FF4B24" stroke-width="1.6" fill="none" />
+                            <path d="M90 72 C120 72, 135 76, 165 76" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.2" fill="none" />
+                            <path d="M90 108 C125 108, 135 80, 165 80" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" stroke-dasharray="3 3" fill="none" />
+                            <path d="M90 144 C130 144, 140 84, 165 84" stroke="rgba(255, 75, 36, 0.4)" stroke-width="1.2" stroke-dasharray="3 3" fill="none" />
+
+                            <!-- Central Junction Node -->
+                            <circle cx="165" cy="78" r="7" fill="rgba(255, 75, 36, 0.25)" stroke="#FF4B24" stroke-width="1.6" />
+                            <circle cx="165" cy="78" r="3" fill="#FF4B24" />
+                            <path d="M172 78 L195 78" stroke="#FF4B24" stroke-width="1.6" />
+
+                            <!-- Right Code Syntax Window -->
+                            <rect x="195" y="24" width="128" height="132" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.2" />
+                            <line x1="195" y1="44" x2="323" y2="44" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+                            <circle cx="208" cy="34" r="2.5" fill="#FF4B24" />
+                            <circle cx="217" cy="34" r="2.5" fill="rgba(255, 255, 255, 0.2)" />
+                            <circle cx="226" cy="34" r="2.5" fill="rgba(255, 255, 255, 0.2)" />
+
+                            <line x1="210" y1="58" x2="255" y2="58" stroke="#FF4B24" stroke-width="1.8" stroke-linecap="round" />
+                            <line x1="260" y1="58" x2="295" y2="58" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="222" y1="72" x2="275" y2="72" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="222" y1="84" x2="305" y2="84" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="232" y1="96" x2="280" y2="96" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="222" y1="108" x2="260" y2="108" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="210" y1="122" x2="242" y2="122" stroke="#FF4B24" stroke-width="1.8" stroke-linecap="round" />
+                            <line x1="210" y1="136" x2="275" y2="136" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <div class="panel-top-bar">
+                        <div class="panel-icon-badge" aria-hidden="true">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <span class="panel-eyebrow-tag">Digital Utilities</span>
+                    </div>
+
+                    <div class="panel-body">
+                        <h3 class="panel-headline">Digital tools that connect everything.</h3>
+                        
+                        <div class="panel-expanded-content">
+                            <p class="panel-description">
+                                Specialized digital utilities, API integrations, database optimization, and user experience design to modernize legacy workflows and increase organizational agility.
+                            </p>
+                            <ul class="panel-feature-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>UI/UX Design &amp; Prototyping</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Custom Web Applications &amp; Portals</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Database Architecture &amp; Tuning</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> <span>Software &amp; Cloud Integrations</span></li>
+                            </ul>
+                            <div class="panel-cta-wrap">
+                                <a href="services.html#digital-solutions" class="panel-cta-link">
+                                    <span>Explore Digital Solutions</span>
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
             </div>
         </div>
     </section>
